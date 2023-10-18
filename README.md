@@ -12,11 +12,12 @@
     * [FAIR-in-a-box software](#fair-in-a-box-software)
     * [Standalone implementation](#standalone-implementation)
 * [Exemplar data](#exemplar-csv-templates)
+* [CARE-SM Toolkit](#care-sm-toolkit)
 
 <hr>
 
 # Quick start
-To jump directly to the "just tell me what I have to do to make this work", please [follow this link](/CSV/README.md).
+To jump directly to the "just tell me what I have to do to make this work" using FAIR-in-a-box software, please [follow this link](https://github.com/ejp-rd-vp/FiaB/blob/main/CARE-SM_FiaB/README.md).
 
 If you want to understand more deeply what you are doing, read on!
 
@@ -29,12 +30,12 @@ The proposed implementation workflows (both EJPRD and Standalone) consumes CSV t
 These columns are referenced in a template, which defines the structure of the resulting RDF shape. These templates are formulated in [YARRRML](https://rml.io/yarrrml/spec/), a versatile templating language capable of defining the RDF structure and uses the column names to reference the CSV data and create a complete RDF representation.
 
 
-From the [European Joint Project on Rare Diseases (EJP-RD)](https://www.ejprarediseases.org/) initiative, a set of technologies and softwares have been created, capable of consuming data tables into RDF data representation. [FAIR-in-a-box]() has implemented a whole pipeline for patient-based data using CARE-SM. Same technologies can be used outside FAIR-in-a-box software in a standalone implementation.
+From the [European Joint Project on Rare Diseases (EJP-RD)](https://www.ejprarediseases.org/) initiative, a set of technologies and softwares have been created, capable of consuming data tables into RDF data representation. [FAIR-in-a-box](https://github.com/ejp-rd-vp/FiaB) has implemented a whole pipeline for patient-based data using CARE-SM. Same technologies can be used outside FAIR-in-a-box software in a standalone implementation.
 
 
 ## FAIR-in-a-box software
 
-FAIR-in-a-box solution is explained out of this repository, please [follow this link]()
+FAIR-in-a-box solution is explained out of this repository, please [follow this link](https://github.com/ejp-rd-vp/FiaB)
 
 ## Standalone implementation
 
@@ -86,7 +87,7 @@ The RDF file should be created at ./data/triples` folder.
 
 ## Exemplar CSV templates
 
-You can also find an exemplar patient data table **before and after** using CARE-SM Toolkit implementation at [exemplar_data](/CSV/exemplar_data/) folder.
+You can also find an exemplar patient data table **before and after** using CARE-SM Toolkit implementation at [exemplar_data](/CSV/exemplar_data/README.md) folder.
 
 ## CARE-SM Toolkit
 
