@@ -100,448 +100,448 @@
 
 ## Data Element Glossary
 
-Here you can find the list of data elements and the columns required to be defined. Those that are optional, feel free to add them. If not, leave them empty.
-
-
 #### **Legend:**
-Those columns colored as <span style="color: grey"> GREY means UNUSED </b></span> for this case.
-Those columns colored as <span style="color: orange"> <b> ORANGE means IN CASE OF ANY </b></span> .
-Those columns colored as <span style="color: blue"> <b> BLUE means REQUIRED </b></span> column to fill in.
+
+- ![](https://placehold.co/15x15/808080/808080.png) This column is **UNUSED** for this case.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) This column is filled in **IN CASE OF ANY**.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) This column colored is **REQUIRED** for this case.
+
+
+
+Here you can find the list of data elements and the columns required to be defined. Those that are optional, feel free to add them. If not, leave them empty.
 
 
 ### Birthdate:
 
-* <span style="color: blue"> <b> model </b></span> : Birthdate
-* <span style="color: blue"> <b> pid </b></span> : patient unique identifier.
-* <span style="color: blue"> <b> value </b></span> : ISO 8601 formatted date (not date time)
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: grey"> age </b></span> : Year of birth defined as YYYY.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Birthdate
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: patient unique identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: ISO 8601 formatted date (not date time)
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/808080/808080.png) **age**: Year of birth defined as YYYY.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 
 ### Birthyear:
 
-* <span style="color: blue"> <b> model </b></span> : Birthyear
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : year of birth defined as YYYY.
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: grey"> age </b></span> : 
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Birthyear
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: year of birth defined as YYYY.
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/808080/808080.png) **age**: 
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Deathdate:
 
 
-* <span style="color: blue"> <b> model </b></span> : Deathdate
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : ISO 8601 formatted date of death (not date time)
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Deathdate
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: ISO 8601 formatted date of death (not date time)
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 
 ### First Confirmed Visit:
 
-* <span style="color: blue"> <b> model </b></span> : First_visit
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : ISO 8601 formatted date of first confirmed visit (not date time)
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: First_visit
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: ISO 8601 formatted date of first confirmed visit (not date time). Its required to add at least one the following: `value` and/or `age` column (preferably `value`)
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information. Its required to add at least one the following: `value` and/or `age` column (preferably `value`)
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 
 ### Symptoms onset:
 
 
-* <span style="color: blue"> <b> model </b></span> : Symptom_onset
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> :  ISO 8601 formatted date of symptom onset (not date time). This value represents the onset **perceived** by the patient, as a difference of the clinical observation, defined as `startdate`.
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: grey"> age </b></span> : patient age when this observation was *perceived* by the patient, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptom_onset
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**:  ISO 8601 formatted date of symptom onset (not date time). This value represents the onset **perceived** by the patient, as a difference of the clinical observation, defined as `startdate`.
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/808080/808080.png) **age**: patient age when this observation was *perceived* by the patient, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 
 ### Sex:
 
-* <span style="color: blue"> <b> model </b></span> : Sex
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: orange"> value </b></span> : human readable label, e.g. Female
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : one of the following: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Sex
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label, e.g. Female
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: one of the following: 
     * http://purl.obolibrary.org/obo/NCIT_C16576 (Female) ; 
     * http://purl.obolibrary.org/obo/NCIT_C20197 (Male); 
     * http://purl.obolibrary.org/obo/NCIT_C124294 (Undetermined) ; 
     * http://purl.obolibrary.org/obo/NCIT_C17998 (Unknown, use this for foetal undetermined) 
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: grey"> age </b></span> :
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/808080/808080.png) **age**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Participation status:
 
-* <span style="color: blue"> <b> model </b></span> : Status
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: orange"> value </b></span> : any human readable response, e.g. Lost of follow-up
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : one of the following: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Status
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: any human readable response, e.g. Lost of follow-up
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: one of the following: 
     * http://semanticscience.org/resource/SIO_010059 (dead)
     * http://semanticscience.org/resource/SIO_010058 (alive)
     * http://purl.obolibrary.org/obo/NCIT_C70740 (lost to follow-up)
     * http://purl.obolibrary.org/obo/NCIT_C124784 (refused to participate)
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Symptoms, signs or phenotype assessment:
 
-* <span style="color: blue"> <b> model </b></span> : Symptom
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> :
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : IRI that defines clinical phenotypic symptom or sign: For example Human Phenotype ontology (HPO) term represented with a full URL such as http://purl.obolibrary.org/obo/HP_0001251
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptom
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: IRI that defines clinical phenotypic symptom or sign: For example Human Phenotype ontology (HPO) term represented with a full URL such as http://purl.obolibrary.org/obo/HP_0001251
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Diagnosis:
 
-* <span style="color: blue"> <b> model </b></span> : Diagnosis
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> :
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : IRI that defines clinical condition as disease or disorder: Orphanet disease ontology (ORDO) represented with a full URL such as http://www.orpha.net/ORDO/Orphanet_199630
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Diagnosis
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png)  **value**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: IRI that defines clinical condition as disease or disorder: Orphanet disease ontology (ORDO) represented with a full URL such as http://www.orpha.net/ORDO/Orphanet_199630
+- ![](https://placehold.co/15x15/808080/808080.png)  **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Genetic information:
 
-* <span style="color: blue"> <b> model </b></span> : Genetic
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: orange"> <b> value </b></span> : human readable label that defines the genetic identifier. Example: HNGC:489
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : genetic code constructed by appending the HGVS/HGNC/OMIM code, e.g. https://www.omim.org/entry/310200
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Genetic
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the genetic identifier. Example: HNGC:489
+- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: genetic code constructed by appending the HGVS/HGNC/OMIM code, e.g. https://www.omim.org/entry/310200
+- ![](https://placehold.co/15x15/808080/808080.png)  **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 
 ### Consent for being contacted for research:
 
-* <span style="color: blue"> <b> model </b></span> : Consent_contacted
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: orange"> <b> value </b></span> : some label describing consent outcome
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Consent_contacted
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: some label describing consent outcome
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Consent for data (re)use permission:
 
-* <span style="color: blue"> <b> model </b></span> : Consent_used
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: orange"> <b> value </b></span> : some label describing consent outcome
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Consent_used
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: some label describing consent outcome
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Biobank:
 
-* <span style="color: blue"> <b> model </b></span> : Biobank
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> :
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: blue"> <b> agent_id </b></span> : Biobank Identifier as https://directory.bbmri-eric.eu/{biobank id}
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Biobank
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: Biobank Identifier as https://directory.bbmri-eric.eu/{biobank id}
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Disability:
 
-* <span style="color: blue"> <b> model </b></span> : Disability
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : numeric score/value of the test output.
-* <span style="color: blue"> <b> value_datatype </b></span> : XSD datatype that defines `value` column type, e.g. `xsd:float` por a decimal score.
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: blue"> <b> process_type </b></span> : child of http://purl.obolibrary.org/obo/NCIT_C20993 (research or clinical assessment tool)
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Disability
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: numeric score/value of the test output.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` por a decimal score.
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **process_type**: child of http://purl.obolibrary.org/obo/NCIT_C20993 (research or clinical assessment tool)
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Body measurement:
 
-* <span style="color: blue"> <b> model </b></span> : Body_measurement
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : resulting value from this observation
-* <span style="color: blue"> <b> value_datatype </b></span> : XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
-* <span style="color: blue"> <b> valueIRI </b></span> : child of Personal Attribute: http://purl.obolibrary.org/obo/NCIT_C19332
-* <span style="color: grey"> process_type </b></span> : 
-* <span style="color: blue"> <b> unit_type </b></span> : child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> : 
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Body_measurement
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this observation
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: child of Personal Attribute: http://purl.obolibrary.org/obo/NCIT_C19332
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit_type**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Laboratory measurement:
 
-* <span style="color: blue"> <b> model </b></span> : Lab_measurement
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: blue"> <b> value </b></span> : resulting value from this analysis.
-* <span style="color: blue"> <b> value_datatype </b></span> : XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
-* <span style="color: grey"> valueIRI </b></span> : 
-* <span style="color: grey"> process_type </b></span> : 
-* <span style="color: blue"> <b> unit_type </b></span> : child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
-* <span style="color: blue"> <b> input_type </b></span> : material input represented as Child of Anatomic, Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g: obo:Urine)
-* <span style="color: blue"> <b> target_type </b></span> : compound being measured in the sample. Child of Drug, Food, Chemical or Biomedical Material http://purl.obolibrary.org/obo/NCIT_C1908 (e.g. obo:Creatinine http://purl.obolibrary.org/obo/NCIT_C399)
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> : 
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Lab_measurement
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this analysis.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit_type**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **input_type**: material input represented as Child of Anatomic, Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g: obo:Urine)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **target_type**: compound being measured in the sample. Child of Drug, Food, Chemical or Biomedical Material http://purl.obolibrary.org/obo/NCIT_C1908 (e.g. obo:Creatinine http://purl.obolibrary.org/obo/NCIT_C399)
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Medical imaging:
 
-* <span style="color: blue"> <b> model </b></span> : Imaging
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> : 
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : medical imagine GUID of the file (must be a GUID system compatible with RDF Resource identifiers)
-* <span style="color: blue"> <b> process_type </b></span> : child of Imaging technique http://purl.obolibrary.org/obo/NCIT_C17369  (e.g. obo:Digital X-Ray http://purl.obolibrary.org/obo/NCIT_C18001)
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: blue"> <b> target_type </b></span> : child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g. obo:Palmar Region http://purl.obolibrary.org/obo/NCIT_C33252)
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: grey"> agent_id </b></span> :
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Imaging
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: medical imagine GUID of the file (must be a GUID system compatible with RDF Resource identifiers)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **process_type**: child of Imaging technique http://purl.obolibrary.org/obo/NCIT_C17369  (e.g. obo:Digital X-Ray http://purl.obolibrary.org/obo/NCIT_C18001)
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **target_type**: child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g. obo:Palmar Region http://purl.obolibrary.org/obo/NCIT_C33252)
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **agent_id**:
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Medications:
 
-* <span style="color: blue"> <b> model </b></span> : Medication
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> : dose value prescribed to the patient
-* <span style="color: grey"> value_datatype </b></span> : XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
-* <span style="color: grey"> valueIRI </b></span> : 
-* <span style="color: grey"> process_type </b></span> : 
-* <span style="color: blue"> <b> unit_type </b></span> : child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> : 
-* <span style="color: blue"> <b> frequency_type </b></span> : child of obo:Temporal Qualifier http://purl.obolibrary.org/obo/NCIT_C21514 (e.g. obo:Per Day)
-* <span style="color: blue"> <b> frequency_value </b></span> : frequency value prescribe to the patient
-* <span style="color: blue"> <b> agent_id </b></span> : ATC URI-code for drugs components. (e.g. https://www.whocc.no/atc_ddd_index/?code=A07EA01)
-* <span style="color: blue"> <b> route_type </b></span> : child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (e.g. obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Medication
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**: dose value prescribed to the patient
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit_type**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **frequency_type**: child of obo:Temporal Qualifier http://purl.obolibrary.org/obo/NCIT_C21514 (e.g. obo:Per Day)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **frequency_value**: frequency value prescribe to the patient
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: ATC URI-code for drugs components. (e.g. https://www.whocc.no/atc_ddd_index/?code=A07EA01)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **route_type**: child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (e.g. obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Medical intervention:
 
-* <span style="color: blue"> <b> model </b></span> : Intervention
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> : 
-* <span style="color: grey"> value_datatype </b></span> :
-* <span style="color: grey"> valueIRI </b></span> :
-* <span style="color: blue"> <b> process_type </b></span> : Child of Intervention or Procedure http://purl.obolibrary.org/obo/NCIT_C25218 (ex: obo:Tumor Resection http://purl.obolibrary.org/obo/NCIT_C164212)
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: orange"> <b> target_type </b></span> : Child of Anatomic Structure, System, or Substance
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: orange"> <b> agent_id </b></span> : If any, ATC URI-code for drugs components. (example: https://www.whocc.no/atc_ddd_index/?code=A07EA01)
-* <span style="color: orange"> <b> route_type </b></span> : In case of any, Child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (example: obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Intervention
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**: 
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **process_type**: Child of Intervention or Procedure http://purl.obolibrary.org/obo/NCIT_C25218 (ex: obo:Tumor Resection http://purl.obolibrary.org/obo/NCIT_C164212)
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **target_type**: Child of Anatomic Structure, System, or Substance
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: If any, ATC URI-code for drugs components. (example: https://www.whocc.no/atc_ddd_index/?code=A07EA01)
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **route_type**: In case of any, Child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (example: obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
 ### Clinical trials:
 
-* <span style="color: blue"> <b> model </b></span> : Clinical_trial
-* <span style="color: blue"> <b> pid </b></span> : individual identifier, in form of a patient identifier.
-* <span style="color: grey"> value </b></span> :
-* <span style="color: grey"> value_datatype </b></span> : 
-* <span style="color: blue"> <b> valueIRI </b></span> : IRI that defines clinical condition as disease or disorder: Orphanet disease ontology (ORDO) represented with a full URL such as http://www.orpha.net/ORDO/Orphanet_199630
-* <span style="color: grey"> process_type </b></span> :
-* <span style="color: grey"> unit_type </b></span> :
-* <span style="color: grey"> input_type </b></span> :
-* <span style="color: grey"> target_type </b></span> :
-* <span style="color: grey"> frequency_type </b></span> :
-* <span style="color: grey"> frequency_value </b></span> :
-* <span style="color: blue"> <b> agent_id </b></span> : GUID for this medical center where this clinical trial is taking place.
-* <span style="color: grey"> route_type </b></span> :
-* <span style="color: orange"> <b> startdate </b></span> : ISO 8601 formatted start date of observation
-* <span style="color: orange"> <b> enddate </b></span> : ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-* <span style="color: orange"> <b> age </b></span> : patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
-* <span style="color: orange"> <b> comments </b></span> : human readable comments of any kind related to this procedure.
-* <span style="color: orange"> <b> event_id </b></span> : contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
-
-
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Clinical_trial
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
+- ![](https://placehold.co/15x15/808080/808080.png) **value**:
+- ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: IRI that defines clinical condition as disease or disorder: Orphanet disease ontology (ORDO) represented with a full URL such as http://www.orpha.net/ORDO/Orphanet_199630
+- ![](https://placehold.co/15x15/808080/808080.png) **process_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: GUID for this medical center where this clinical trial is taking place.
+- ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
