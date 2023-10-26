@@ -217,7 +217,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-- ![](https://placehold.co/15x15/808080/808080.png) **age**: patient age when this observation was *perceived* by the patient, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was *perceived* by the patient, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same event (e.g.: under same visit occurrence or under certain diagnosis/phenotype relationship)
 
@@ -297,7 +297,7 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Diagnosis
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
-- ![](https://placehold.co/15x15/808080/808080.png)  **value**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **value**: Human readable label of the diagnosed condition.
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: IRI that defines clinical condition as disease or disorder: Orphanet disease ontology (ORDO) represented with a full URL such as http://www.orpha.net/ORDO/Orphanet_199630
 - ![](https://placehold.co/15x15/808080/808080.png)  **process_type**:
@@ -391,7 +391,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: Biobank Identifier as https://directory.bbmri-eric.eu/{biobank id}
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: Biobank Identifier as https://directory.bbmri-eric.eu/{biobank id}
 - ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
@@ -511,14 +511,14 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **value**: 
 - ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**:
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **process_type**: Child of Intervention or Procedure http://purl.obolibrary.org/obo/NCIT_C25218 (ex: obo:Tumor Resection http://purl.obolibrary.org/obo/NCIT_C164212)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **process_type**: child of Intervention or Procedure http://purl.obolibrary.org/obo/NCIT_C25218 (ex: obo:Tumor Resection http://purl.obolibrary.org/obo/NCIT_C164212)
 - ![](https://placehold.co/15x15/808080/808080.png) **unit_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **input_type**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **target_type**: Child of Anatomic Structure, System, or Substance
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **target_type**: child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: If any, ATC URI-code for drugs components. (example: https://www.whocc.no/atc_ddd_index/?code=A07EA01)
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **route_type**: In case of any, Child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (example: obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **route_type**: in case of any, Child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (example: obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information.
