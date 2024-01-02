@@ -320,7 +320,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in form of a patient identifier.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the genetic identifier. Example: HNGC:489
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: genetic code constructed by appending the HGVS/HGNC/OMIM code, e.g. https://www.omim.org/entry/310200
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: genetic code constructed by appending the HGVS/HGNC/OMIM code, e.g. <https://www.omim.org/entry/310200
 - ![](https://placehold.co/15x15/808080/808080.png)  **process_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **input_type**:
@@ -391,7 +391,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **target_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: Biobank Identifier as https://directory.bbmri-eric.eu/{biobank id}
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: Biobank Identifier as <https://directory.bbmri-eric.eu/{biobank id}
 - ![](https://placehold.co/15x15/808080/808080.png) **route_type**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
@@ -496,7 +496,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **target_type**: 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **frequency_type**: child of obo:Temporal Qualifier http://purl.obolibrary.org/obo/NCIT_C21514 (e.g. obo:Per Day)
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **frequency_value**: frequency value prescribe to the patient
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: ATC URI-code for drugs components. (e.g. https://www.whocc.no/atc_ddd_index/?code=A07EA01)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent_id**: ATC URI-code for drugs components. (e.g. <https://www.whocc.no/atc_ddd_index/?code=A07EA01)
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **route_type**: child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (e.g. obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
@@ -517,7 +517,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **target_type**: child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: If any, ATC URI-code for drugs components. (example: https://www.whocc.no/atc_ddd_index/?code=A07EA01)
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent_id**: If any, ATC URI-code for drugs components. (example: <https://www.whocc.no/atc_ddd_index/?code=A07EA01)
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **route_type**: in case of any, Child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (example: obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
