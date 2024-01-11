@@ -71,7 +71,7 @@ You can use Docker compose to run the services (red box from [Figure 1](#standal
 version: "3"
 services:
   yarrml-rdfizer:
-    image: markw/yarrrml-rml-ejp:0.0.2
+    image: markw/yarrrml-rml-ejp:0.0.3
     container_name: yarrrml-rdfizer
     environment:
       # (nquads (default), trig, trix, jsonld, hdt, turtle)
