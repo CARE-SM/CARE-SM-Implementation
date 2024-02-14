@@ -484,7 +484,7 @@ Here you can find the list of data elements and the columns required to be defin
     * http://purl.obolibrary.org/obo/NCIT_C17953 for Education level.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: IRI based unit of measuement ontological term.
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
-- ![](https://placehold.co/15x15/808080/808080.png) **target**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **target**: IRI based ontological term that defines target. E.g. HPO term for symptom at Sypmtom Onset questionnaire.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **intensity**: IRI based ontological term that describes intentisity. E.g. Child of NCIT:Clinical or Research Assessment Answer http://purl.obolibrary.org/obo/NCIT_C91106
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **protocol_id**: URL reference to a protocol, e.g. https://protocols.io deposit or any identifier that describe the specific properties of the assessment of the questionnaire. E.g. https://www.protocols.io/view/questionnaire-eye-movements-complaints-4r3l25q4pl1y/v1
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
