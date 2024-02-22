@@ -1,31 +1,33 @@
 PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX sio: <https://sio.semanticscience.org/resource/>
+PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX ordo: <http://www.orpha.net/ORDO/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+SELECT distinct ?individual_id ?value_startdate (?attribute_type as ?diagnostic)
 
-SELECT distinct ?individual_id ?process_label ?value ?attribute_type ?attribute_type2 ?comments ?target_type ?agent ?route_type ?input_type ?value_startdate
+# Filter by process type: Diagnostic procedure
 
 WHERE {
     GRAPH ?g {
         ?role sio:SIO_000356 ?process ;  a sio:SIO_000016 .
-        ?process a sio:SIO_000006, ?process_type; rdfs:label ?process_label; sio:SIO_000229 ?output; sio:SIO_000291 ?target; sio:SIO_000230 ?input; sio:SIO_000139 ?agent; sio:SIO_000339 ?protocol; sio:SIO_000139 ?agent_id . FILTER(?process_type != sio:SIO_000006) .
+        ?process a sio:SIO_000006, ?process_type; rdfs:label ?process_label; sio:SIO_000229 ?output; sio:SIO_000291 ?target; sio:SIO_000230 ?input; sio:SIO_000139 ?agent; sio:SIO_000339 ?protocol; sio:SIO_000139 ?agent_id . 
+        FILTER(?process_type = obo:NCIT_C18020) .
         ?output sio:SIO_000628 ?attribute; a sio:SIO_000015 , ?output_type ; rdfs:label ?output_label .FILTER(?output_type != sio:SIO_000015) .
-        ?attribute a sio:SIO_000614.    
+        ?attribute a sio:SIO_000614.
+        
         OPTIONAL{?attribute a ?attribute_type. FILTER(?attribute_type != sio:SIO_000614)}
         OPTIONAL{?attribute sio:SIO_000332 ?attribute_type2. FILTER(?attribute_type2 != sio:SIO_000614)}
         OPTIONAL{?input a ?input_type. FILTER(?input_type != sio:SIO_000015)} 
         OPTIONAL{?target a ?target_type. FILTER(?target_type != sio:SIO_000015)} 
         OPTIONAL{?agent a ?agent_type. FILTER(?agent != sio:SIO_000015)}
-        #FILTER(?agent_type = obo:NCIT_C16696 || ?agent_type = obo:NCIT_C177929)}
 
-        ?protocol a sio:SIO_001043 ; sio:SIO_000008 ?frequency, ?intensity, ?activity, ?substance, ?concentration, ?route .
-        OPTIONAL{?frequency a ?frequency_type, sio:SIO_000015 .FILTER (?frequency_type != sio:SIO_000015)}
-        OPTIONAL{?substance a ?substance_type, sio:SIO_000015 .FILTER (?substance_type != sio:SIO_000015)}
-        OPTIONAL{?concentration a ?concentration_type, sio:SIO_000015 .FILTER (?concentration_type != sio:SIO_000015)}
-        OPTIONAL{?intensity a ?intensity_type, sio:SIO_000015 .FILTER (?intensity_type != sio:SIO_000015)}
-        OPTIONAL{?activity a ?activity_type, sio:SIO_000015 .FILTER (?activity_type != sio:SIO_000015)}
+        # ?protocol a sio:SIO_001043 ; sio:SIO_000008 ?frequency, ?intensity, ?activity, ?concentration, ?route .
+        OPTIONAL{?frequency a ?frequency_type, sio:SIO_001367 .FILTER (?frequency_type != sio:SIO_001367)}
+        OPTIONAL{?substance a ?substance_type, sio:SIO_011126 .FILTER (?substance_type != sio:SIO_011126)}
+        OPTIONAL{?concentration a ?concentration_type, sio:SIO_001088 .FILTER (?concentration_type != sio:SIO_001088)}
+        OPTIONAL{?intensity a ?intensity_type, sio:SIO_001212 .FILTER (?intensity_type != sio:SIO_001212)}
+        OPTIONAL{?activity a ?activity_type, sio:SIO_000006 .FILTER (?activity_type != sio:SIO_000006)}
         OPTIONAL{?route a ?route_type, sio:SIO_000015 .FILTER (?route_type != sio:SIO_000015)}
             
         OPTIONAL{?process rdfs:comments ?comments}. 
@@ -42,8 +44,7 @@ WHERE {
     ?age a sio:SIO_001013, obo:NCIT_C25150 .
     ?startdate a sio:SIO_000031 .
     ?enddate a sio:SIO_000032 .
-        
-    #OPTIONAL{?event a obo:NCIT_C25499 ; sio:SIO_000300 ?event_id.}
+    #?event a obo:NCIT_C25499 ; sio:SIO_000300 ?event_id.
         
     OPTIONAL{?age sio:SIO_000300 ?age_value .}
     OPTIONAL{?startdate sio:SIO_000300 ?value_startdate .}
@@ -52,4 +53,5 @@ WHERE {
     ?timeline a obo:NCIT_C54576, sio:SIO_000417; sio:SIO_000332 ?individual .
     ?individual a sio:SIO_000498 ; sio:SIO_000671 ?individual_identifier .       
     ?individual_identifier a sio:SIO_000115 ; sio:SIO_000300 ?individual_id .
+    
 }

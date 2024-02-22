@@ -1,0 +1,46 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ordo: <http://www.orpha.net/ORDO/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ofn: <http://www.ontotext.com/sparql/functions/>
+
+SELECT (count(DISTINCT ?individual_id) as ?count)
+WHERE {      BIND(365 AS ?daysInYear)
+      BIND(xsd:integer(ofn:asDays(?onsetvalue_startdate - ?birthdatevalue_startdate)) AS ?OnsetInDays)
+    	BIND(xsd:integer(ofn:floorDiv(?OnsetInDays, ?daysInYear)) AS ?Years)	
+    	FILTER(?Years > 7 )
+    {
+		SELECT distinct ?individual_id ?onsetvalue_startdate ?birthdatevalue_startdate
+        WHERE {GRAPH ?birthdateg {
+        ?birthdaterole sio:SIO_000356 ?birthdateprocess ;  a sio:SIO_000016 .
+        ?birthdateprocess a sio:SIO_000006 , ?birthdateprocess_type ; sio:SIO_000339 ?birthdateprotocol; sio:SIO_000291 ?birthdatetarget; sio:SIO_000229 ?birthdateoutput. FILTER (?birthdateprocess_type != sio:SIO_000006) .
+        ?birthdateoutput sio:SIO_000628 ?birthdateattribute; a sio:SIO_000015.
+        ?birthdateattribute a sio:SIO_000614, ?birthdateattribute_type. FILTER(?birthdateattribute_type = obo:NCIT_C68615 ) .
+        ?birthdateprotocol a sio:SIO_001043; sio:SIO_000008 ?birthdateactivity . }
+    ?birthdateg a obo:NCIT_C62143 ; sio:SIO_000068 ?birthdatetimeline, ?birthdateevent ; sio:SIO_000680 ?birthdatestartdate; sio:SIO_000681 ?birthdateenddate; sio:SIO_000687 ?birthdateage; sio:SIO_000300 ?birthdateuniqid .
+    ?birthdatetimeline a obo:NCIT_C54576, sio:SIO_000417; sio:SIO_000332 ?birthdateindividual .
+    ?birthdateindividual a sio:SIO_000498 ; sio:SIO_000671 ?birthdateindividual_identifier .       
+    ?birthdateindividual_identifier a sio:SIO_000115 ; sio:SIO_000300 ?individual_id .   ?birthdatestartdate a sio:SIO_000031; sio:SIO_000300 ?birthdatevalue_startdate .GRAPH ?onsetg {
+        ?onsetrole sio:SIO_000356 ?onsetprocess ;  a sio:SIO_000016 .
+        ?onsetprocess a sio:SIO_000006 , ?onsetprocess_type ; sio:SIO_000339 ?onsetprotocol; sio:SIO_000291 ?onsettarget; sio:SIO_000229 ?onsetoutput. FILTER (?onsetprocess_type != sio:SIO_000006) .
+        ?onsetoutput sio:SIO_000628 ?onsetattribute; a sio:SIO_000015.
+        ?onsetattribute a sio:SIO_000614, ?onsetattribute_type. FILTER(?onsetattribute_type = sio:SIO_000614 ) .
+        ?onsetprotocol a sio:SIO_001043; sio:SIO_000008 ?onsetactivity .?onsettarget a ?onsettarget_type. FILTER(?onsettarget_type = obo:HP_0003131).
+        ?onsetactivity a sio:SIO_000006, ?onsetactivity_type. FILTER(?onsetactivity_type = obo:NCIT_C124353) }
+    ?onsetg a obo:NCIT_C62143 ; sio:SIO_000068 ?onsettimeline, ?onsetevent ; sio:SIO_000680 ?onsetstartdate; sio:SIO_000681 ?onsetenddate; sio:SIO_000687 ?onsetage; sio:SIO_000300 ?onsetuniqid .
+    ?onsettimeline a obo:NCIT_C54576, sio:SIO_000417; sio:SIO_000332 ?onsetindividual .
+    ?onsetindividual a sio:SIO_000498 ; sio:SIO_000671 ?onsetindividual_identifier .       
+    ?onsetindividual_identifier a sio:SIO_000115 ; sio:SIO_000300 ?individual_id .   ?onsetstartdate a sio:SIO_000031; sio:SIO_000300 ?onsetvalue_startdate .}
+}
+GRAPH ?sexg {
+        ?sexrole sio:SIO_000356 ?sexprocess ;  a sio:SIO_000016 .
+        ?sexprocess a sio:SIO_000006 , ?sexprocess_type ; sio:SIO_000339 ?sexprotocol; sio:SIO_000291 ?sextarget; sio:SIO_000229 ?sexoutput. FILTER (?sexprocess_type != sio:SIO_000006) .
+        ?sexoutput sio:SIO_000628 ?sexattribute; a sio:SIO_000015.
+        ?sexattribute a sio:SIO_000614, ?sexattribute_type. FILTER(?sexattribute_type = obo:NCIT_C16576 ) .
+        ?sexprotocol a sio:SIO_001043; sio:SIO_000008 ?sexactivity . }
+    ?sexg a obo:NCIT_C62143 ; sio:SIO_000068 ?sextimeline, ?sexevent ; sio:SIO_000680 ?sexstartdate; sio:SIO_000681 ?sexenddate; sio:SIO_000687 ?sexage; sio:SIO_000300 ?sexuniqid .
+    ?sextimeline a obo:NCIT_C54576, sio:SIO_000417; sio:SIO_000332 ?sexindividual .
+    ?sexindividual a sio:SIO_000498 ; sio:SIO_000671 ?sexindividual_identifier .       
+    ?sexindividual_identifier a sio:SIO_000115 ; sio:SIO_000300 ?individual_id .
+}
