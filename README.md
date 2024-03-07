@@ -50,8 +50,7 @@ From those who are not interested in using FAIR-in-a-box or interested in explor
 
 2) **Quality control**: After creating this CSV template with the patient data on it, this CSV template needs to be adapted to YARRRML template before performing RDF transformation. This modification add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider. This translation is executed by a component called [CARE-SM Toolkit](#care-sm-toolkit). CARE-SM Toolkit will transform your `preCARE.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1]()). It is this final, much richer CSV file that is used by the YARRRML to do the final RDF transformation.
 
-3) **YARRRML template**: Alongside this standard CSV template, a YARRRML template defines the final RDF shape based on the CARE semantic model. This YARRRML template is provided [here](#standalone-implementation) at this repository. This YARRRML templates was created by using [EMbuilder YARRRML template builder](https://github.com/pabloalarconm/EMbuilder)
-
+3) **YARRRML template**: Alongside this standard CSV template, a YARRRML template defines the final RDF shape based on the CARE semantic model. This YARRRML template is provided [here](/YARRRML/README.md) at this repository, so there's no need for you to create it from scratch. For more information about how we built our YARRRML template, check [EMbuilder YARRRML template builder](https://github.com/pabloalarconm/EMbuilder).
 
 5) **Folder distribution:**
 ```bash
