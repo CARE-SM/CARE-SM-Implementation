@@ -46,7 +46,7 @@ From those who are not interested in using FAIR-in-a-box or interested in explor
 	<img src="/CARE-SM_workflow.png"> 
 <p align="center" ><b>Figure 1: Standalone CARE-SM implementation </b></p>
 
-1) **CSV template creation:** First, a CSV data template is created. This template is defined by a [data element glossary](), explaining which columns are required to be filled in every data element. Each row is an observation, and depending on the type of observation different columns of the template must be filled (as explained above). Rename your CSV file as `preCARE.csv`.
+1) **CSV template creation:** First, a CSV data template is created. This template is defined by a [data element glossary](/CSV/README.md), explaining which columns are required to be filled in every data element. Each row is an observation, and depending on the type of observation different columns of the template must be filled (as explained above). Rename your CSV file as `preCARE.csv`.
 
 2) **Quality control**: After creating this CSV template with the patient data on it, this CSV template needs to be adapted to YARRRML template before performing RDF transformation. This modification add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider. This translation is executed by a component called [CARE-SM Toolkit](#care-sm-toolkit). CARE-SM Toolkit will transform your `preCARE.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1]()). It is this final, much richer CSV file that is used by the YARRRML to do the final RDF transformation.
 
