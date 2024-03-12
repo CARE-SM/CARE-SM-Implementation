@@ -329,11 +329,11 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the genetic identifier. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: gene variant code constructed by appending the HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/808080/808080.png)  **target**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**:gene variant code constructed by appending the HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
 - ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
@@ -358,7 +358,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/808080/808080.png)  **target**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: gene variant code constructed by appending the HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
 - ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
@@ -373,13 +373,13 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Protein
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: human readable label that defines the protein identifier. Example: GRCh38/hg38 7p22.3-q36.3(chr7:54185-159282390)x1
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the protein identifier. Example: GRCh38/hg38 7p22.3-q36.3(chr7:54185-159282390)x1
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **valueIRI**: protein variant code constructed by appending the HGVS/UniProt code, e.g. https://www.ncbi.nlm.nih.gov/clinvar/variation/146075/
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Protein Sequencing: http://purl.obolibrary.org/obo/NCIT_C18883
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/808080/808080.png)  **target**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: protein variant code constructed by appending the HGVS/UniProt code, e.g. https://www.ncbi.nlm.nih.gov/clinvar/variation/146075/
 - ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
