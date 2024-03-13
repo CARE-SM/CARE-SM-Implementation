@@ -264,7 +264,7 @@ mapping:
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(functional specification_type)
+        value: $(substance_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -485,7 +485,7 @@ mapping:
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(unit_type)
+        value: $(concentration_unit_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -659,7 +659,7 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   sio: https://semanticscience.org/resource/
-  this: '|||baseURI|||'
+  this: http://my_example.com/
   xsd: http://www.w3.org/2001/XMLSchema#
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
   idlab-fn: http://example.com/idlab/function/
