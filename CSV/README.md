@@ -478,7 +478,7 @@ Here you can find the list of data elements and the columns required to be defin
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptoms_omset
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptoms_onset
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of ocurrence (It's not the same this temporal information than the one described as `startdate`/`enddate`/`age` for the time when this observation was registered) 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:date` for date or `xsd:integer`
