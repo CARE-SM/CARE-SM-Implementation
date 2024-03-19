@@ -568,7 +568,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this analysis.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **activity**: 
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Creatinine Clearance Adjusted for BSA: http://purl.obolibrary.org/obo/NCIT_C147324
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **input**: material input represented as Child of Anatomic, Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g: obo:Urine)
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **target**: compound being measured in the sample. Child of Drug, Food, Chemical or Biomedical Material http://purl.obolibrary.org/obo/NCIT_C1908 (e.g. obo:Creatinine http://purl.obolibrary.org/obo/NCIT_C399)
@@ -610,7 +610,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **value**: dose value prescribed to the patient
 - ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **activity**: child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (e.g. obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **activity**: child of Route of Administration http://purl.obolibrary.org/obo/NCIT_C38114 (e.g. obo:Sublingual Route of Administration http://purl.obolibrary.org/obo/NCIT_C38300 )
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
 - ![](https://placehold.co/15x15/808080/808080.png) **target**: 
