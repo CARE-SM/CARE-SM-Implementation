@@ -75,10 +75,10 @@
         * [Laboratory measurement](#laboratory-measurement) - Patient laboratory measurements.
         * [Body measurement](#body-measurement) - Patient physical measurement of the body. 
         * [Medical imaging](#medical-imaging) -  Patient medical imaging data.
-        * [Genetic variant](#genetic-sequence-variant) -  Genetic variant assessment.
-        * [Zygosity](#genetic-variant-zygosity) -  Zygosity of a certain genetic variant.
+        * [Genetic variant](#genetic-assessment) -  Genetic variant assessment.
+        <!-- * [Zygosity](#genetic-variant-zygosity) -  Zygosity of a certain genetic variant.
         * [Protein variant](#protein-sequence-variant) -  Protein variant assessment.
-        * [Aminoacid location](#protein-aminoacid-position) -  Position of a aminoacid in a certain protein chain.
+        * [Aminoacid location](#protein-aminoacid-position) -  Position of a aminoacid in a certain protein chain. -->
 
     * Treatment-related assesments:
         * [Medication](#medication) - Patient drug administration based on a prescription.
@@ -279,7 +279,7 @@ Here you can find the list of data elements and the columns required to be defin
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptom
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Phenotype
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/808080/808080.png) **value**:
 - ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
@@ -321,29 +321,40 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
-### Genetic sequence variant:
+### Genetic assessment:
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Genotype
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the genetic identifier. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
-- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: Lexical Annonatation code for the genetic variant. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
+- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: Genetic variant code constructed by appending the HGNC/OMIM/HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**:gene variant code constructed by appending the HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
+- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: Molecular target type, refering to the level of molecular dogma central studied by the genetic variant. Some of the examples terminology from NCIT:
+    * [NCIT:Gene](http://purl.obolibrary.org/obo/NCIT_C16612)
+    * [NCIT:Gene Variant](http://purl.obolibrary.org/obo/NCIT_C97927)
+    * [NCIT:Protein](http://purl.obolibrary.org/obo/NCIT_C17021)
+    * [NCIT:Messenger RNA](http://purl.obolibrary.org/obo/NCIT_C813)
+    * [NCIT:Transfer RNA](http://purl.obolibrary.org/obo/NCIT_C816)
+    * [NCIT:Mitochondrial RNA](http://purl.obolibrary.org/obo/NCIT_C25975)
 - ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **agent**:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **agent**: Zygosity associated with this particular genetic variant. Defined by GENO OBO Foundry ontology: One of the following:
+    * [GENO:hemizygosity](http://purl.obolibrary.org/obo/GENO_0000134)
+    * [GENO:heterozygosity](http://purl.obolibrary.org/obo/GENO_0000135)
+    * [GENO:homozygosity](http://purl.obolibrary.org/obo/GENO_0000136)
+    * [GENO:nullizygosity](http://purl.obolibrary.org/obo/GENO_0000978)
+    * [GENO:compound heterozygosity](http://purl.obolibrary.org/obo/GENO_0000402)
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
-
+<!-- 
 ### Genetic variant zygosity:
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Zygosity
@@ -409,7 +420,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event. -->
 
 ### Consent for being contacted for research:
 
