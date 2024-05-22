@@ -556,10 +556,13 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Body_measurement
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this observation
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: child of Personal Attribute: http://purl.obolibrary.org/obo/NCIT_C19332
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values. In case of none, `xsd:float` will be added by default.
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: child of [NCIT:Personal Attribute](http://purl.obolibrary.org/obo/NCIT_C19332), for instance:
+    * [NCIT:Weight](http://purl.obolibrary.org/obo/NCIT_C25208)
+    * [NCIT:Height](http://purl.obolibrary.org/obo/NCIT_C25347)
+    * [NCIT:Body Mass Index](http://purl.obolibrary.org/obo/NCIT_C16358)
 - ![](https://placehold.co/15x15/808080/808080.png) **activity**: 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
 - ![](https://placehold.co/15x15/808080/808080.png) **target**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **protocol_id**: URL reference to a protocol, e.g. https://protocols.io deposit or any identifier that describes the specific properties of this clinical procedure. E.g. https://www.protocols.io/view/hplc-sample-prep-4r3l25ew4l1y/v1
@@ -577,11 +580,11 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Lab_measurement
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this analysis.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values. In case of none, `xsd:float` will be added by default.
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Creatinine Clearance Adjusted for BSA: http://purl.obolibrary.org/obo/NCIT_C147324
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **input**: material input represented as Child of Anatomic, Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g: obo:Urine)
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: child of UO:unit http://purl.obolibrary.org/obo/UO_0000000
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **input**: material input represented as Child of Anatomic, Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g: obo:Urine)
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **target**: compound being measured in the sample. Child of Drug, Food, Chemical or Biomedical Material http://purl.obolibrary.org/obo/NCIT_C1908 (e.g. obo:Creatinine http://purl.obolibrary.org/obo/NCIT_C399)
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **protocol_id**: URL reference to a protocol, e.g. https://protocols.io deposit or any identifier that describes the specific properties of this clinical procedure. E.g. https://www.protocols.io/view/hplc-sample-prep-4r3l25ew4l1y/v1
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
@@ -603,7 +606,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **activity**: child of Imaging technique http://purl.obolibrary.org/obo/NCIT_C17369  (e.g. obo:Digital X-Ray http://purl.obolibrary.org/obo/NCIT_C18001)
 - ![](https://placehold.co/15x15/808080/808080.png) **unit**:
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **target**: child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g. obo:Palmar Region http://purl.obolibrary.org/obo/NCIT_C33252)
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **target**: child of Anatomic Structure, System, or Substance http://purl.obolibrary.org/obo/NCIT_C12219 (e.g. obo:Palmar Region http://purl.obolibrary.org/obo/NCIT_C33252)
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **protocol_id**: URL reference to a protocol, e.g. https://protocols.io deposit or any identifier that describes the specific properties of this clinical procedure. E.g. https://www.protocols.io/view/anatomical-variations-and-dimensions-of-the-poplit-3byl4qqk8vo5
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
@@ -670,7 +673,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/808080/808080.png) **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **agent**: GUID for this medical center where this clinical trial is taking place.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent**: GUID for this medical center where this clinical trial is taking place.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
