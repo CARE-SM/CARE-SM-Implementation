@@ -17,7 +17,7 @@
 <hr>
 
 # Quick start
-To jump directly to the "just tell me what I have to do to make this work" using FAIR-in-a-box software, please [follow this link](https://github.com/ejp-rd-vp/FiaB/blob/main/CARE-SM_FiaB/README.md).
+To jump directly to the "just tell me what I have to do to make this work" using FAIR-in-a-box software, please [follow this link](https://github.com/ejp-rd-vp/FiaB/tree/main/CARE-SM-Fiab).
 
 If you want to understand more deeply what you are doing, read on!
 
