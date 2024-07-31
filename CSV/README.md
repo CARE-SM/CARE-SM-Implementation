@@ -327,7 +327,7 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Genotype
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: Lexical Annonatation code for the genetic variant. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Lexical Annonatation code for the genetic variant. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**:
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: Genetic variant code constructed by appending the HGNC/OMIM/HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
@@ -485,14 +485,14 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
-### Symptom Onset:
+### Symptoms onset:
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptoms_onset
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of ocurrence (It's not the same this temporal information than the one described as `startdate`/`enddate`/`age` for the time when this observation was registered) 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:date` for date or `xsd:integer`
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of symptoms ocurrence (Do not confuse with `startdate`/`enddate`/`age` for defining when this observation was registered).
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column.`xsd:date` for date or `xsd:integer` for age. (xsd:float is not included as an option beacuse fractional ages are not accepted by CARE-SM Toolkit).
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/808080/808080.png) **activity**:
 - ![](https://placehold.co/15x15/808080/808080.png) **unit**: 
@@ -652,7 +652,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **protocol_id**: URL reference to a protocol, e.g. https://protocols.io deposit or any identifier that describes the specific properties of this clinical procedure. E.g. https://www.protocols.io/view/hplc-sample-prep-4r3l25ew4l1y/v1
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent**: If any, ATC URI-code for drugs components. (example: <https://www.whocc.no/atc_ddd_index/?code=A07EA01)
+- ![](https://placehold.co/15x15/808080/808080.png) **agent**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `value`/`startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
