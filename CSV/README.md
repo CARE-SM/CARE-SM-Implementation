@@ -491,8 +491,8 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptoms_onset
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of symptoms ocurrence (Do not confuse with `startdate`/`enddate`/`age` for defining when this observation was registered).
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column.`xsd:date` for date or `xsd:integer` for age. (xsd:float is not included as an option beacuse fractional ages are not accepted by CARE-SM Toolkit).
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of symptoms occurrence (Do not confuse with `startdate`/`enddate`/`age` for defining when this observation was registered).
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column.`xsd:date` for date or `xsd:integer` for age. (xsd:float is not included as an option because fractional ages are not accepted by CARE-SM Toolkit).
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/808080/808080.png) **activity**:
 - ![](https://placehold.co/15x15/808080/808080.png) **unit**: 
