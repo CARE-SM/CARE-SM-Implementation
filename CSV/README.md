@@ -59,7 +59,7 @@
         * [Deathdate](#deathdate) -  Patient date of death.
         * [First confirmed visit](#first-confirmed-visit) - Patient first contact with specialized center.
         * [Participation status](#participation-status) - Patient healthcare participation status.
-        * [Symptoms onset](#symptom-onset) - Patient signs/symptoms onset.
+        * [Symptoms onset](#symptoms-onset) - Patient signs/symptoms onset.
 
     * Demographic and questionnaire/PROMs representations:
         * [Sex](#sex) -  Patient sex at birth.
