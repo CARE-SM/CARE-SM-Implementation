@@ -1,108 +1,73 @@
-# CARE-SM Implementation -- CSV Documentation
+# CARE-SM CSV Module Documentation
 
-<br>
-
-* [Step by Step](#step-by-step)
-* [Data element glossary](#data-element-glossary)
+This guide explains how to structure, populate, and utilize CSV files for patient data in CARE-SM.
 
 ---
 
-## Step by step
+## Table of Contents
+- [Step-by-step guide for FIAR-in-a-box ](#step-by-step-guide-for-fiar-in-box-implementation)
+- [Data Element Glossary](#data-element-glossary)
 
-1) Create your CSV file
+## Step-by-Step Guide for FIAR-in-box implementation
 
-    In order to create a functional CSV file for your patient data for implementing CARE-SM. A set of column names are required to be populated in a CSV file. We recommend first to create an empty CSV file with all these column names on it. The required column names are:
+1. **Create the CSV File**  
 
-    * `model`: Tagname used by CARE-SM toolkit to recognize which data element is being represented.
-    * `pid`: individual identifier, in the form of a patient identifier.
-    * `value`: Numerical or Lexical data value of this data entry.
-    * `value_datatype`: XSD data type of the `value` column name.
-    * `valueIRI`: IRI-based value of this data entry.
-    * `activity`: IRI-based ontological class that describes the patient's specific description related to the clinical procedure.
-    * `unit`: IRI-based ontological class that describes the unit of `value` measurement.
-    * `input`: IRI-based ontological class that describes the input of the patient procedure.
-    * `target`:IRI-based ontological class that describes the target of the patient procedure.
-    * `protocol_id`: IRI-based identifier that is used the define the protocol identifier.
-    * `frequency_type`: IRI-based ontological class that describes the frequency of `value` presence.
-    * `frequency_value`: Numerical value associated with the `frequency_type`
-    * `agent`: GUID used to describe any agent that participates in the data entry
-    * `startdate`: the start date of the observation process
-    * `enddate`: the end date of the observation process
-    * `age`: the age of the patient at time of observation
-    * `comments` : free-text comments
-    * `event_id`: a method for grouping observations together (explained elsewhere... one day!)
+   Begin with an empty CSV and save it as `preCARE.csv`. This filename is required for recognition and quality control within CARE-SM.
+   
+   This document would only allow a set of concrete columns names:
+   - `model`, `pid`, `event_id`, `value`, `age`, `value_datatype`, `valueIRI`, `activity`, `unit`, `input`, `target`, `protocol_id`, `frequency_type`, `frequency_value`, `agent`, `startdate`, `enddate`, `comments`
 
-    Very few of this column names are present at all (or most) of the cases, but **it's not mandatory to provide all columns that exists in the CSV file, but it's forbidden to use other columns that the named above**. Each data element requires a subset of these columns to be filled, and the rest are 'null'.
+   *Example:*
+   ```csv
+   model,pid,event_id,value,age,value_datatype,valueIRI,activity,unit,input,target,protocol_id,frequency_type,frequency_value,agent,startdate,enddate,comments
+   ,,,,,,,,,,,,,,,,,
+   ```
+2. **Populate Data**  
+   Each data entry needs specific fields (not all fields are mandatory). See the glossary below for details.
 
-    This is an example of an empty CSV file with the proper columns names:
-
+    *Example:*
     ```csv
     model,pid,event_id,value,age,value_datatype,valueIRI,activity,unit,input,target,protocol_id,frequency_type,frequency_value,agent,startdate,enddate,comments
-    ,,,,,,,,,,,,,,,,,
-
-    ```
-
-2) Rename the CSV file as `preCARE.csv`. CARE-SM will recognize the name as the proper tagname and perform the quality control on it using `CARE-SM Toolkit`. This is why it's mandatory to create a single file because this is the one file it's going to be executed.
-
-    
-
-3) Populate your patient data elements
-
-    Every data element requires a concrete set of column names to be populated. This is because not every clinical entry contains the same type of information.(e.g. a laboratory measurement needs to specify the targeting molecule to analyze, but a diagnosis assessment doesn't require defining any target). 
-
-    <br>
-    This is a glossary of every data requirement documentation:
-
-    * Medical history and participation status:
-        * [Birthdate](#birthdate) - Patient date of birth.
-        * [Birthyear](#birthyear) - Year in which a person was born.
-        * [Deathdate](#deathdate) -  Patient date of death.
-        * [First confirmed visit](#first-confirmed-visit) - Patient first contact with specialized center.
-        * [Participation status](#participation-status) - Patient healthcare participation status.
-        * [Symptoms onset](#symptoms-onset) - Patient signs/symptoms onset.
-
-    * Demographic and questionnaire/PROMs representations:
-        * [Sex](#sex) -  Patient sex at birth.
-        * [Education level](#education) - Patient scholar level code measured by ISCED.
-        * [Disability](#disability) - Patient disability score/assessment.
-        * [Questionnaire](#questionnaire) - Generic questionnaire representation for any clinical question/PROM.
-
-    * Conditions and findings assesments:
-        * [Diagnosis](#diagnosis) - Patient disease diagnosis.
-        * [Symptom/phenotype assessment](#symptoms-signs-or-phenotype-assessment) -  Patient symptom/phenotype assessment.
-
-    * Clinical and molecular measurements:
-        * [Laboratory measurement](#laboratory-measurement) - Patient laboratory measurements.
-        * [Body measurement](#body-measurement) - Patient physical measurement of the body. 
-        * [Medical imaging](#medical-imaging) -  Patient medical imaging data.
-        * [Genetic variant](#genetic-assessment) -  Genetic variant assessment.
-        <!-- * [Zygosity](#genetic-variant-zygosity) -  Zygosity of a certain genetic variant.
-        * [Protein variant](#protein-sequence-variant) -  Protein variant assessment.
-        * [Aminoacid location](#protein-aminoacid-position) -  Position of a aminoacid in a certain protein chain. -->
-
-    * Treatment-related assesments:
-        * [Medication](#medication) - Patient drug administration based on a prescription.
-        * [Surgical intervention](#surgery) -  Therapeutical interventation related to a surgerical procedure.
-
-    * Research sample availability and consent:
-        * [Biobank](#biobank) - availability of subject's samples in a biobank.
-        * [Consent](#consent-for-being-contacted-for-research) -  consent given by a subject.
-
-    * Clinical trials:
-        * [Clinical trial](#clinical-trial) -  patient participation in clinical trial.
-
-    <br>
-    This is an example of functional `preCARE.csv` file that can be used with CARE-SM Toolkit,  both for `FAIR-in-a-box` software or Standalone implementation:
-
-    ```csv
-    model,pid,event_id,value,age,value_datatype,valueIRI,activity,unit,input,target,intensity,protocol_id,frequency_type,frequency_value,agent,route,startdate,enddate,comments
     Diagnosis,30056,,,,,http://www.orpha.net/ORDO/Orphanet_93552,,,,,,,,,,,2006-01-19,,
-
     ```
 
-    Find more complete exemplar cases at [`exemplar_data`](/CSV/exemplar_data/README.md) folder.
+    For more examples, refer to the [`exemplar_data`](https://github.com/CARE-SM/CARE-SM-Implementation/blob/main/CSV/exemplar_data/README.md) folder.
 
 ## Data Element Glossary
+
+* Medical history and participation status:
+    * [Birthdate](#birthdate)
+    * [Birthyear](#birthyear)
+    * [Deathdate](#deathdate)
+    * [First confirmed visit](#first-confirmed-visit)
+    * [Participation status](#participation-status)
+    * [Symptoms onset](#symptoms-onset)
+
+* Demographic and questionnaire:
+    * [Sex](#sex)
+    * [Education level](#education)
+    * [Disability](#disability)
+    * [Questionnaire](#questionnaire)
+
+* Conditions and findings:
+    * [Diagnosis](#diagnosis)
+    * [Symptom/phenotype](#symptomphenotype)
+
+* Clinical and molecular measurements:
+    * [Laboratory measurement](#laboratory-measurement)
+    * [Body measurement](#body-measurement)
+    * [Medical imaging](#medical-imaging)
+    * [Genetic](#genetic)
+
+* Treatment and intervertions:
+    * [Medication](#medication)
+    * [Surgery](#surgery)
+
+* Research samples:
+    * [Biobank](#biobank)
+
+* Clinical trial:
+    * [Clinical trial](#clinical-trial)
 
 #### **Legend:**
 
@@ -275,7 +240,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
-### Symptoms, signs or phenotype assessment:
+### Symptom/phenotype:
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
@@ -321,11 +286,11 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
-### Genetic assessment:
+### Genetic:
 
 **This data element can be queried (for counting anonymized patient information) by Beacon API created for CARE-SM, for more information, click [here](https://github.com/CARE-SM/beaconAPI4CARESM)**
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Genotype
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Genetic
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Lexical Annonatation code for the genetic variant. E.g. NM-004006.2:c.4375C>T p.(Arg1459*)
 - ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**:
@@ -333,94 +298,32 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
 - ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
 - ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: Molecular target type, refering to the level of molecular dogma central studied by the genetic variant. Some of the examples terminology from NCIT:
+- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **target**: Zygosity associated with this particular genetic variant. Defined by GENO OBO Foundry ontology: One of the following:
+
+    * [GENO:hemizygosity](http://purl.obolibrary.org/obo/GENO_0000134)
+    * [GENO:heterozygosity](http://purl.obolibrary.org/obo/GENO_0000135)
+    * [GENO:homozygosity](http://purl.obolibrary.org/obo/GENO_0000136)
+    * [GENO:nullizygosity](http://purl.obolibrary.org/obo/GENO_0000978)
+    * [GENO:compound heterozygosity](http://purl.obolibrary.org/obo/GENO_0000402)
+
+- ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
+- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **agent**: Molecular target type, refering to the level of molecular dogma central studied by the genetic variant. Some of the examples terminology from NCIT:
     * [NCIT:Gene](http://purl.obolibrary.org/obo/NCIT_C16612)
     * [NCIT:Gene Variant](http://purl.obolibrary.org/obo/NCIT_C97927)
     * [NCIT:Protein](http://purl.obolibrary.org/obo/NCIT_C17021)
     * [NCIT:Messenger RNA](http://purl.obolibrary.org/obo/NCIT_C813)
     * [NCIT:Transfer RNA](http://purl.obolibrary.org/obo/NCIT_C816)
     * [NCIT:Mitochondrial RNA](http://purl.obolibrary.org/obo/NCIT_C25975)
-- ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **agent**: Zygosity associated with this particular genetic variant. Defined by GENO OBO Foundry ontology: One of the following:
-    * [GENO:hemizygosity](http://purl.obolibrary.org/obo/GENO_0000134)
-    * [GENO:heterozygosity](http://purl.obolibrary.org/obo/GENO_0000135)
-    * [GENO:homozygosity](http://purl.obolibrary.org/obo/GENO_0000136)
-    * [GENO:nullizygosity](http://purl.obolibrary.org/obo/GENO_0000978)
-    * [GENO:compound heterozygosity](http://purl.obolibrary.org/obo/GENO_0000402)
+
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 <!-- 
-### Genetic variant zygosity:
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Zygosity
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines zygosity. E.g. Homozygosity
-- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **valueIRI**: One the following:
-    - NCIT:Homozygosity: http://purl.obolibrary.org/obo/NCIT_C45826
-    - NCIT:Hemizygosity: http://purl.obolibrary.org/obo/NCIT_C64346
-    - NCIT:Heterozygosity: http://purl.obolibrary.org/obo/NCIT_C45825
-    - NCIT:Nullizygosity: http://purl.obolibrary.org/obo/NCIT_C148063
-- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Microarray Analysis: http://purl.obolibrary.org/obo/NCIT_C18477
-- ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: gene variant code constructed by appending the HGVS annotation, e.g. https://www.ncbi.nlm.nih.gov/clinvar/RCV000008537
-- ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **agent**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
-
-### Protein sequence variant:
-
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Protein
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **value**: human readable label that defines the protein identifier. Example: GRCh38/hg38 7p22.3-q36.3(chr7:54185-159282390)x1
-- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **activity**: Specific method in form of an ontological class that describe the process, e.g. NCIT:Protein Sequencing: http://purl.obolibrary.org/obo/NCIT_C18883
-- ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png)  **input**: Anatomical structure where the sample was extracted. Recommended a child of NCIT:Biospecimen or NCIT:Anatomic Structure, System, or Substance, e.g. NCIT:Blood Sample: http://purl.obolibrary.org/obo/NCIT_C17610
-- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: protein variant code constructed by appending the HGVS/UniProt code, e.g. https://www.ncbi.nlm.nih.gov/clinvar/variation/146075/
-- ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **agent**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
-
-### Protein aminoacid position:
-
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Aminoacid
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Non-decimal numeric value that defines the position of the aminoacid. E.g. 13 
-- ![](https://placehold.co/15x15/808080/808080.png)  **value_datatype**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: protein code constructed by appending the Uniprot code. E.g. https://www.uniprot.org/uniprotkb/Q8WWM7
-- ![](https://placehold.co/15x15/808080/808080.png)  **activity**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **unit**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **input**:
-- ![](https://placehold.co/15x15/1589F0/1589F0.png)  **target**: CHEBI ontological term for the specific amino acid measured. E.g. http://purl.obolibrary.org/obo/CHEBI_15356
-- ![](https://placehold.co/15x15/808080/808080.png)  **protocol_id**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_type**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **frequency_value**:
-- ![](https://placehold.co/15x15/808080/808080.png)  **agent**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event. -->
 
 ### Consent for being contacted for research:
 
@@ -464,6 +367,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
+-->
 ### Biobank:
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Biobank
