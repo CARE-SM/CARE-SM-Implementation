@@ -1,5 +1,5 @@
 mapping:
-  20240309124425630476_source_cde_test:
+  20241113112523256419_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -21,7 +21,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_Identifier
-  20240309124425630493_source_cde_test:
+  20241113112523256436_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -39,7 +39,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_Individual
-  20240309124425630500_source_cde_test:
+  20241113112523256441_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -61,57 +61,22 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Role
-  20240309124425630509_source_cde_test:
+  20241113112523256447_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
         type: iri
-        function: grel:controls_if
-        parameters:
-          - parameter: grel:bool_b
-            value:
-              function: idlab-fn:isNull
-              parameters:
-                - [idlab-fn:str, $(target_id)]
-          - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Target
-          - parameter: grel:any_false
-            value: $(target_id)
+        value: this:$(pid)_$(uniqid)_Target
       predicate: sio:SIO_000291
-    - objects:
-        type: iri
-        function: grel:controls_if
-        parameters:
-          - parameter: grel:bool_b
-            value:
-              function: idlab-fn:isNull
-              parameters:
-                - [idlab-fn:str, $(agent_id)]
-          - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Agent
-          - parameter: grel:any_false
-            value: $(agent_id)
-      predicate: sio:SIO_000139
     - objects:
         type: iri
         value: this:$(pid)_$(uniqid)_Input
       predicate: sio:SIO_000230
     - objects:
         type: iri
-        function: grel:controls_if
-        parameters:
-          - parameter: grel:bool_b
-            value:
-              function: idlab-fn:isNull
-              parameters:
-                - [idlab-fn:str, $(output_id)]
-          - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Output
-          - parameter: grel:any_false
-            value: $(output_id)
+        value: this:$(pid)_$(uniqid)_Output
       predicate: sio:SIO_000229
     - objects:
-        type: iri
         function: grel:controls_if
         parameters:
           - parameter: grel:bool_b
@@ -123,7 +88,12 @@ mapping:
             value: this:$(pid)_$(uniqid)_Protocol
           - parameter: grel:any_false
             value: $(protocol_id)
+        type: iri
       predicate: sio:SIO_000339
+    - objects:
+        type: iri
+        value: this:$(pid)_$(uniqid)_Specific_method
+      predicate: sio:SIO_000028
     - objects:
         type: iri
         value: sio:SIO_000006
@@ -143,7 +113,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Process
-  20240309124425630520_source_cde_test:
+  20241113112523256455_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -154,6 +124,20 @@ mapping:
         type: iri
         value: this:$(pid)_$(uniqid)_Unit
       predicate: sio:SIO_000221
+    - objects:
+        function: grel:controls_if
+        parameters:
+          - parameter: grel:bool_b
+            value:
+              function: idlab-fn:isNull
+              parameters:
+                - [idlab-fn:str, $(output_id)]
+          - parameter: grel:any_true
+            value: this:$(pid)_$(uniqid)_Output_identifier
+          - parameter: grel:any_false
+            value: $(output_id)
+        type: iri
+      predicate: sio:SIO_000671
     - objects:
         type: iri
         value: sio:SIO_000015
@@ -184,23 +168,11 @@ mapping:
       predicate: sio:SIO_000300
     sources:
     - source_cde_test
-    subjects:
-      function: grel:controls_if
-      parameters:
-        - parameter: grel:bool_b
-          value:
-            function: idlab-fn:isNull
-            parameters:
-              - [idlab-fn:str, $(output_id)]
-        - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Output
-        - parameter: grel:any_false
-          value: $(output_id)
-  20240309124425630529_source_cde_test:
+    subjects: this:$(pid)_$(uniqid)_Output
+  20241113112523256460_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
-        type: iri
         function: grel:controls_if
         parameters:
           - parameter: grel:bool_b
@@ -209,9 +181,10 @@ mapping:
               parameters:
                 - [idlab-fn:str, $(substance_id)]
           - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Functional-specification
+            value: this:$(pid)_$(uniqid)_Functional_specification
           - parameter: grel:any_false
             value: $(substance_id)
+        type: iri
       predicate: sio:SIO_000028
     - objects:
         type: iri
@@ -251,12 +224,12 @@ mapping:
           value: this:$(pid)_$(uniqid)_Protocol
         - parameter: grel:any_false
           value: $(protocol_id)
-  20240309124425630535_source_cde_test:
+  20241113112523256464_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
         type: iri
-        value: this:$(pid)_$(uniqid)_Specification_unit
+        value: this:$(pid)_$(uniqid)_Concentration_unit
       predicate: sio:SIO_000221
     - objects:
         type: iri
@@ -264,7 +237,7 @@ mapping:
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(substance_type)
+        value: $(concentration_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -277,25 +250,21 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Concentration
-  20240309124425630541_source_cde_test:
+  20241113112523256466_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
-    - objects:
-        type: iri
-        value: this:$(pid)_$(uniqid)_Process
-      predicate: sio:SIO_000325
     - objects:
         type: iri
         value: sio:SIO_000006
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(specific_process_type)
+        value: $(specific_method_type)
       predicate: rdf:type
     sources:
     - source_cde_test
-    subjects: this:$(pid)_$(uniqid)_Specific_process
-  20240309124425630546_source_cde_test:
+    subjects: this:$(pid)_$(uniqid)_Specific_method
+  20241113112523256470_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -313,7 +282,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Input
-  20240309124425630552_source_cde_test:
+  20241113112523256474_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -330,33 +299,26 @@ mapping:
       predicate: rdfs:label
     sources:
     - source_cde_test
-    subjects:
-      function: grel:controls_if
-      parameters:
-        - parameter: grel:bool_b
-          value:
-            function: idlab-fn:isNull
-            parameters:
-              - [idlab-fn:str, $(target_id)]
-        - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Target
-        - parameter: grel:any_false
-          value: $(target_id)
-  20240309124425630557_source_cde_test:
+    subjects: this:$(pid)_$(uniqid)_Target
+  20241113112523256478_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
         type: iri
-        value: sio:SIO_000015
+        value: sio:SIO_000115
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(agent_type)
+        value: $(output_id_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
-        value: $(model) agent
+        value: $(model) output identifier
       predicate: rdfs:label
+    - objects:
+        datatype: xsd:string
+        value: $(output_id_value)
+      predicate: sio:SIO_000300
     sources:
     - source_cde_test
     subjects:
@@ -366,12 +328,12 @@ mapping:
           value:
             function: idlab-fn:isNull
             parameters:
-              - [idlab-fn:str, $(agent_id)]
+              - [idlab-fn:str, $(output_id)]
         - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Agent
+          value: this:$(pid)_$(uniqid)_Output_indentifier
         - parameter: grel:any_false
-          value: $(agent_id)
-  20240309124425630563_source_cde_test:
+          value: $(output_id)
+  20241113112523256482_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -389,7 +351,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Attribute
-  20240309124425630568_source_cde_test:
+  20241113112523256485_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -407,7 +369,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Unit
-  20240309124425630573_source_cde_test:
+  20241113112523256488_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -433,10 +395,10 @@ mapping:
             parameters:
               - [idlab-fn:str, $(substance_id)]
         - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Functional-specification
+          value: this:$(pid)_$(uniqid)_Functional_specification
         - parameter: grel:any_false
           value: $(substance_id)
-  20240309124425630579_source_cde_test:
+  20241113112523256491_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -454,7 +416,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Action_specification
-  20240309124425630586_source_cde_test:
+  20241113112523256496_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -476,7 +438,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Frequency
-  20240309124425630591_source_cde_test:
+  20241113112523256499_source_cde_test:
     graph: this:$(uniqid)_Context
     predicateobject:
     - objects:
@@ -493,8 +455,8 @@ mapping:
       predicate: rdfs:label
     sources:
     - source_cde_test
-    subjects: this:$(pid)_$(uniqid)_Specification_unit
-  20240309124425630599_source_cde_test:
+    subjects: this:$(pid)_$(uniqid)_Concentration_unit
+  20241113112523256503_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -507,6 +469,20 @@ mapping:
     - objects:
         type: iri
         value: this:$(uniqid)_Enddate
+      predicate: sio:SIO_000681
+    - objects:
+        function: grel:controls_if
+        parameters:
+          - parameter: grel:bool_b
+            value:
+              function: idlab-fn:isNull
+              parameters:
+                - [idlab-fn:str, $(organization_id)]
+          - parameter: grel:any_true
+            value: this:$(pid)_$(uniqid)_Organization
+          - parameter: grel:any_false
+            value: $(organization_id)
+        type: iri
       predicate: sio:SIO_000681
     - objects:
         type: iri
@@ -527,7 +503,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(uniqid)_Context
-  20240309124425630604_source_cde_test:
+  20241113112523256506_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -548,7 +524,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(uniqid)_Age
-  20240309124425630610_source_cde_test:
+  20241113112523256510_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -569,7 +545,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(uniqid)_Startdate
-  20240309124425630616_source_cde_test:
+  20241113112523256514_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -590,7 +566,35 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(uniqid)_Enddate
-  20240309124425630620_source_cde_test:
+  20241113112523256516_source_cde_test:
+    predicateobject:
+    - objects:
+        type: iri
+        value: sio:SIO_000012
+      predicate: rdf:type
+    - objects:
+        type: iri
+        value: $(organization_type)
+      predicate: rdf:type
+    - objects:
+        datatype: xsd:string
+        value: $(model) organization
+      predicate: rdfs:label
+    sources:
+    - source_cde_test
+    subjects:
+      function: grel:controls_if
+      parameters:
+        - parameter: grel:bool_b
+          value:
+            function: idlab-fn:isNull
+            parameters:
+              - [idlab-fn:str, $(organization_id)]
+        - parameter: grel:any_true
+          value: this:$(pid)_$(uniqid)_Organization
+        - parameter: grel:any_false
+          value: $(organization_id)
+  20241113112523256520_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -600,14 +604,10 @@ mapping:
         type: iri
         value: sio:SIO_000417
       predicate: rdf:type
-    - objects:
-        type: iri
-        value: obo:NCIT_C54576
-      predicate: rdf:type
     sources:
     - source_cde_test
     subjects: this:$(pid)_Timeline
-  20240309124425630626_source_cde_test:
+  20241113112523256522_source_cde_test:
     predicateobject:
     - objects:
         type: iri
@@ -617,22 +617,14 @@ mapping:
         type: iri
         value: sio:SIO_000498
       predicate: rdf:type
-    - objects:
-        type: iri
-        value: obo:NCIT_C25190
-      predicate: rdf:type
     sources:
     - source_cde_test
     subjects: this:$(pid)_Person
-  20240309124425630631_source_cde_test:
+  20241113112523256524_source_cde_test:
     predicateobject:
     - objects:
         type: iri
         value: sio:SIO_000115
-      predicate: rdf:type
-    - objects:
-        type: iri
-        value: obo:NCIT_C164337
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -641,7 +633,7 @@ mapping:
     sources:
     - source_cde_test
     subjects: this:$(pid)_Person_identifier
-  20240309124425630635_source_cde_test:
+  20241113112523256527_source_cde_test:
     predicateobject:
     - objects:
         type: iri
