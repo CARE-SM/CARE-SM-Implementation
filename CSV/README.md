@@ -372,17 +372,17 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Biobank
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/808080/808080.png) **value**:
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: sample identifier
 - ![](https://placehold.co/15x15/808080/808080.png) **value_datatype**: 
-- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
+- ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**: 
 - ![](https://placehold.co/15x15/808080/808080.png) **activity**:
 - ![](https://placehold.co/15x15/808080/808080.png) **unit**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **input**: Tissue/sample collected during the sampling process. E.g. Cerebrospinal Fluid http://purl.obolibrary.org/obo/NCIT_C12692
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **input**: tissue/sample collected during the sampling process. E.g. Cerebrospinal Fluid http://purl.obolibrary.org/obo/NCIT_C12692
 - ![](https://placehold.co/15x15/808080/808080.png) **target**:
 - ![](https://placehold.co/15x15/808080/808080.png) **protocol_id**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_type**:
 - ![](https://placehold.co/15x15/808080/808080.png) **frequency_value**:
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent**: Biobank Identifier, e.g. https://directory.bbmri-eric.eu/biobankid
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **agent**: biobank Identifier, e.g. https://directory.bbmri-eric.eu/biobankid
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **startdate**: ISO 8601 formatted start date of observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **enddate**: ISO 8601 formatted enddate of observation in case it is different from `startdate`.  
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **age**: patient age when this observation was taken, this age information can be both an addition or an alternative for `startdate`/`enddate` information. Its units are fractional years, so it accepts any decimal figure for age. E.g. 33.75 years.
@@ -395,7 +395,7 @@ Here you can find the list of data elements and the columns required to be defin
 
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Symptoms_onset
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: Age or date of symptoms occurrence (Do not confuse with `startdate`/`enddate`/`age` for defining when this observation was registered).
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: age or date of symptoms occurrence (Do not confuse with `startdate`/`enddate`/`age` for defining when this observation was registered).
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column.`xsd:date` for date or `xsd:integer` for age. (xsd:float is not included as an option because fractional ages are not accepted by CARE-SM Toolkit).
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/808080/808080.png) **activity**:
