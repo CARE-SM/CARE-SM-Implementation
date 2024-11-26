@@ -81,9 +81,9 @@ mapping:
         parameters:
           - parameter: grel:bool_b
             value:
-              function: idlab-fn:isNull
+              function: idlab:isNull
               parameters:
-                - [idlab-fn:str, $(protocol_id)]
+                - [idlab:str, $(protocol_id)]
           - parameter: grel:any_true
             value: this:$(pid)_$(uniqid)_Protocol
           - parameter: grel:any_false
@@ -129,9 +129,9 @@ mapping:
         parameters:
           - parameter: grel:bool_b
             value:
-              function: idlab-fn:isNull
+              function: idlab:isNull
               parameters:
-                - [idlab-fn:str, $(output_id)]
+                - [idlab:str, $(output_id)]
           - parameter: grel:any_true
             value: this:$(pid)_$(uniqid)_Output_identifier
           - parameter: grel:any_false
@@ -177,9 +177,9 @@ mapping:
         parameters:
           - parameter: grel:bool_b
             value:
-              function: idlab-fn:isNull
+              function: idlab:isNull
               parameters:
-                - [idlab-fn:str, $(substance_id)]
+                - [idlab:str, $(substance_id)]
           - parameter: grel:any_true
             value: this:$(pid)_$(uniqid)_Functional_specification
           - parameter: grel:any_false
@@ -217,9 +217,9 @@ mapping:
       parameters:
         - parameter: grel:bool_b
           value:
-            function: idlab-fn:isNull
+            function: idlab:isNull
             parameters:
-              - [idlab-fn:str, $(protocol_id)]
+              - [idlab:str, $(protocol_id)]
         - parameter: grel:any_true
           value: this:$(pid)_$(uniqid)_Protocol
         - parameter: grel:any_false
@@ -326,9 +326,9 @@ mapping:
       parameters:
         - parameter: grel:bool_b
           value:
-            function: idlab-fn:isNull
+            function: idlab:isNull
             parameters:
-              - [idlab-fn:str, $(output_id)]
+              - [idlab:str, $(output_id)]
         - parameter: grel:any_true
           value: this:$(pid)_$(uniqid)_Output_indentifier
         - parameter: grel:any_false
@@ -391,9 +391,9 @@ mapping:
       parameters:
         - parameter: grel:bool_b
           value:
-            function: idlab-fn:isNull
+            function: idlab:isNull
             parameters:
-              - [idlab-fn:str, $(substance_id)]
+              - [idlab:str, $(substance_id)]
         - parameter: grel:any_true
           value: this:$(pid)_$(uniqid)_Functional_specification
         - parameter: grel:any_false
@@ -475,15 +475,15 @@ mapping:
         parameters:
           - parameter: grel:bool_b
             value:
-              function: idlab-fn:isNull
+              function: idlab:isNull
               parameters:
-                - [idlab-fn:str, $(organization_id)]
+                - [idlab:str, $(organization_id)]
           - parameter: grel:any_true
             value: this:$(pid)_$(uniqid)_Organization
           - parameter: grel:any_false
             value: $(organization_id)
         type: iri
-      predicate: sio:SIO_000681
+      predicate: sio:SIO_000253
     - objects:
         type: iri
         value: obo:NCIT_C62143
@@ -587,9 +587,9 @@ mapping:
       parameters:
         - parameter: grel:bool_b
           value:
-            function: idlab-fn:isNull
+            function: idlab:isNull
             parameters:
-              - [idlab-fn:str, $(organization_id)]
+              - [idlab:str, $(organization_id)]
         - parameter: grel:any_true
           value: this:$(pid)_$(uniqid)_Organization
         - parameter: grel:any_false
@@ -654,7 +654,7 @@ prefixes:
   this: '|||baseURI|||'
   xsd: http://www.w3.org/2001/XMLSchema#
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
-  idlab-fn: http://example.com/idlab/function/
+  idlab: http://example.com/idlab/function/
 sources:
   source_cde_test:
     access: /mnt/data/CARE.csv
