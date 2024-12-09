@@ -420,7 +420,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` por a decimal score.
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **activity**: URL that defines the specific clinical questionnaire. Some examples are presented. E.g. http://purl.obolibrary.org/obo/NCIT_C107391  for Edmonton symptom disability assessment .
-- ![](https://placehold.co/15x15/808080/808080.png) **unit**: 
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: score/ value unit of measurement.
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
 - ![](https://placehold.co/15x15/808080/808080.png) **target**:
 - ![](https://placehold.co/15x15/808080/808080.png) **protocol_id**:
@@ -441,7 +441,7 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` por a decimal score.
 - ![](https://placehold.co/15x15/808080/808080.png) **valueIRI**:
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **activity**: URL that defines the specific clinical question defined in the questionnaire or PROM.
-- ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: IRI based unit of measuement ontological term, in case of any.
+- ![](https://placehold.co/15x15/fb9902/fb9902.png) **unit**: score/ value unit of measurement.
 - ![](https://placehold.co/15x15/808080/808080.png) **input**:
 - ![](https://placehold.co/15x15/808080/808080.png) **target**: 
 - ![](https://placehold.co/15x15/808080/808080.png) **protocol_id**:
