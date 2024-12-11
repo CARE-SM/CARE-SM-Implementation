@@ -46,9 +46,9 @@ From those who are not interested in using FAIR-in-a-box or interested in explor
   <img src="/CARE-SM_workflow.png"> 
 <p align="center" ><b>Figure 1: Standalone CARE-SM implementation </b></p>
 
-1) **CSV template creation:** First, a CSV data template is created using the CSV template defined by a [data element glossary](/CSV/README.md) Rename your CSV file as `preCARE.csv`.
+1) **CSV template creation:** First, a CSV data template is created using the CSV template defined by a [data element glossary](/CSV/README.md) Rename your CSV file with one of the tagnames defined at the glossary. Eg.: "Diagnosis", "First_visit" or "Laboratory".
 
-2) **Quality control by CARE-SM toolkit**: CARE-SM Toolkit will transform your `preCARE.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1](#standalone-implementation)). It is this final, much richer CSV file that is used by the YARRRML to do the final RDF transformation.
+2) **Quality control by CARE-SM toolkit**: CARE-SM Toolkit will transform all your tagged CSV files e.g.: `Diagnosis.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1](#standalone-implementation)). It is this final, much richer CSV file that is used by the YARRRML to do the final RDF transformation.
 
 3) **YARRRML template**: Alongside this standard CSV template, a YARRRML template defines the final RDF shape based on the CARE semantic model. This YARRRML template is provided [here](/YARRRML/README.md) at this repository, so there's no need for you to create it from scratch. For more information about how we built our YARRRML template, check [EMbuilder YARRRML template builder](https://github.com/pabloalarconm/EMbuilder).
 

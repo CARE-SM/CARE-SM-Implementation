@@ -54,8 +54,8 @@ This guide explains how to structure, populate, and utilize CSV files for patien
     * [Symptom/phenotype](#symptomphenotype)
 
 * Clinical and molecular measurements:
-    * [Laboratory measurement](#laboratory-measurement)
-    * [Body measurement](#body-measurement)
+    * [Laboratory measurement](#laboratory)
+    * [Corporal measurement](#corporal)
     * [Medical imaging](#medical-imaging)
     * [Genetic](#genetic)
 
@@ -455,9 +455,9 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of this data elements under the same visit occurrence event.
 
 
-### Body measurement:
+### Corporal:
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Body_measurement
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Corporal
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this observation
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values. In case of none, `xsd:float` will be added by default.
@@ -479,9 +479,9 @@ Here you can find the list of data elements and the columns required to be defin
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **comments**: human readable comments of any kind related to this procedure.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **event_id**: contextual identifier (formatted as `integer`) used for relating several of these data elements under the same visit occurrence event.
 
-### Laboratory measurement:
+### Laboratory:
 
-- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Lab_measurement
+- ![](https://placehold.co/15x15/1589F0/1589F0.png) **model**: Laboratory
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **pid**: individual identifier, in the form of a patient identifier.
 - ![](https://placehold.co/15x15/1589F0/1589F0.png) **value**: resulting value from this analysis.
 - ![](https://placehold.co/15x15/fb9902/fb9902.png) **value_datatype**: XSD datatype that defines `value` column type, e.g. `xsd:float` or `xsd:integer` for numerical values. In case of none, `xsd:float` will be added by default.
