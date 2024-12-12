@@ -11,7 +11,7 @@
 * [Implementation workflows](#implementation-workflows)
     * [FAIR-in-a-box software](#fair-in-a-box-software)
     * [Standalone implementation](#standalone-implementation)
-* [Exemplar data](#exemplar-csv-templates)
+* [Exemplar data](#exemplar-data)
 * [CARE-SM Toolkit](#care-sm-toolkit)
 
 <hr>
@@ -87,9 +87,9 @@ The RDF file should be created at ./data/triples` folder.
 ## Exemplar data
 
 
-**CSV:** You can also find an exemplar patient data table **before and after** using CARE-SM Toolkit implementation at [exemplar_data](/CSV/exemplar_data/README.md) folder.
+**CSV:** You can also find an exemplar patient data table **before and after** using CARE-SM Toolkit implementation at [exemplar_data](/CSV/data/README.md) folder.
 
-**RDF:** You can also find resulting RDF patient data at [RDF](/README.md) folder.
+**RDF:** You can also find resulting RDF patient data at [RDF](/RDF/README.md) folder.
 
 ## CARE-SM Toolkit
 
