@@ -1,2 +1,0 @@
-model,pid,event_id,value,age,value_datatype,valueIRI,activity,unit,input,target,protocol_id,frequency_type,frequency_value,agent,startdate,enddate,comments
-Diagnosis,30056,,,,,http://www.orpha.net/ORDO/Orphanet_93552,,,,,,,,,2006-01-19,,
