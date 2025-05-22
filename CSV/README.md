@@ -31,7 +31,7 @@ This guide explains how to structure, populate, and utilize CSV files for patien
     Diagnosis,30056,,,,,http://www.orpha.net/ORDO/Orphanet_93552,,,,,,,,,,,2006-01-19,,
     ```
 
-    For more examples, refer to the [`exemplar_data`](https://github.com/CARE-SM/CARE-SM-Implementation/blob/main/CSV/exemplar_data/README.md) folder.
+    For more examples, refer to the [`exemplar_data`](https://github.com/CARE-SM/CARE-SM-Implementation/tree/main/CSV/data) folder.
 
 ## Data Element Glossary
 

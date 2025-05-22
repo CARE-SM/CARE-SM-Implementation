@@ -25,11 +25,26 @@ If you want to understand more deeply what you are doing, read on!
 
 [CARE Semantic Model](https://github.com/CARE-SM/CARE-Semantic-Model) defines a set of clinical data elements used in the healthcare domain of knowledge. However, it doesn't specify a mechanism for bringing these to life. 
 
-The proposed implementation workflows described in this repository (both Fiab and Standalone) consumes CSV tables as the primary data source. Each row within these tables represents an individual data element. The required information for generating each module is defined within a set of columns. For instance, the diagnosis module requires several distinct columns, including those for patient identifier, diagnosis date, and the IRI used for disease definition. Every individual module is concatenated within a common CSV file. A predefined set of common column names is used to reference each specific clinical entry. This template is defined by a [data element glossary](/CSV/README.md), explaining which columns are required to be filled in every data element.
+The proposed implementation workflows described in this repository (both Fiab and Standalone) uses a common set of technologies for the whole transformation of patient data into a RDF-representation.
 
-These columns are referenced in a template, which defines the structure of the resulting RDF shape. These templates are formulated in [YARRRML](https://rml.io/yarrrml/spec/), a versatile templating language capable of defining the RDF structure and uses the column names to reference the CSV data and create a complete RDF representation.
+1) **CSV**
 
-After creating this CSV template with the patient data on it, this CSV template needs to be adapted to YARRRML template before performing RDF transformation. This modification add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider. This translation is executed by a component called [CARE-SM Toolkit](#care-sm-toolkit).
+      This workflow consumes CSV tables as the primary data source. Each row within these tables represents an individual observation. The required information for generating each module is defined within a set of columns. For instance, the diagnosis module requires several distinct columns, including those for patient identifier, diagnosis date, and the IRI used for disease definition. A predefined set of common column names is used to reference each specific clinical entries. These set of columns acts as a [data element glossary](/CSV/README.md), templating which columns are required to be filled in every data element.
+
+2) **YARRRML**
+
+    These columns are referenced in an RDF-compliance template, which defines the structure of the resulting RDF shape. These templates are formulated in [YARRRML](https://rml.io/yarrrml/spec/), a versatile templating language capable of defining the RDF structure and uses the column names to reference the CSV data and create a complete RDF representation.
+
+
+This implementation requires two main transformation steps:
+
+1) **Data pre-validation and adaptation**
+
+    After creating this CSV template with the patient data on it, this CSV template needs to be adapted to YARRRML template before performing RDF transformation. This modification add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider. This translation is executed by a component called [CARE-SM Toolkit](#care-sm-toolkit).
+
+2) **Data transformation into RDF** 
+
+    Once both CSV template and YARRRML template are 
 
 ## FAIR-in-a-box software
 
@@ -48,7 +63,7 @@ From those who are not interested in using FAIR-in-a-box or interested in explor
 
 1) **CSV template creation:** First, a CSV data template is created using the CSV template defined by a [data element glossary](/CSV/README.md) Rename your CSV file with one of the tagnames defined at the glossary. Eg.: "Diagnosis", "First_visit" or "Laboratory".
 
-2) **Quality control by CARE-SM toolkit**: CARE-SM Toolkit will transform all your tagged CSV files e.g.: `Diagnosis.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1](#standalone-implementation)). It is this final, much richer CSV file that is used by the YARRRML to do the final RDF transformation.
+2) **Quality control by CARE-SM toolkit**: CARE-SM Toolkit will transform all your tagged CSV files e.g.: `Diagnosis.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1](#standalone-implementation)).  This step generates a much richer CSV file that is used by the YARRRML to do the final RDF transformation.
 
 3) **YARRRML template**: Alongside this standard CSV template, a YARRRML template defines the final RDF shape based on the CARE semantic model. This YARRRML template is provided [here](/YARRRML/README.md) at this repository, so there's no need for you to create it from scratch. For more information about how we built our YARRRML template, check [EMbuilder YARRRML template builder](https://github.com/pabloalarconm/EMbuilder).
 
@@ -70,7 +85,7 @@ You can use Docker compose to run the services (red box from [Figure 1](#standal
 version: "3"
 services:
   yarrml-rdfizer:
-    image: markw/yarrrml-rml-ejp:0.1.0
+    image: markw/yarrrml-rml-ejp:0.1.2
     container_name: yarrrml-rdfizer
     environment:
       # (nquads (default), trig, trix, jsonld, hdt, turtle)
