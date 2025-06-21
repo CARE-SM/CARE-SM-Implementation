@@ -7,122 +7,26 @@
 
 <hr>
 
-* [Quick start](#quick-start)
-* [Implementation workflows](#implementation-workflows)
-    * [FAIR-in-a-box software](#fair-in-a-box-software)
-    * [Standalone implementation](#standalone-implementation)
-* [Exemplar data](#exemplar-data)
-* [CARE-SM Toolkit](#care-sm-toolkit)
+## Full Documentation
 
-<hr>
+You can explore the complete documentation [here](https://care-sm.readthedocs.io/en/latest/), including detailed descriptions of all data elements, implementation guidelines, exemplar data, and additional resources.
 
-# Quick start
-To jump directly to the "just tell me what I have to do to make this work" using FAIR-in-a-box software, please [follow this link](https://github.com/ejp-rd-vp/FiaB/tree/main/CARE-SM-Fiab).
+## Communication and feedback
+Your feedback is more than welcome. It will help us improve our semantic data model. Please use [github issues](https://github.com/CARE-SM/CARE-SM-Implementation/issues) to provide your feedback.
 
-If you want to understand more deeply what you are doing, read on!
+## Acknowledgement
 
-# Implementation workflows
+This work was done in the [European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/) project which has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement N°82557.  
+<p align="center">
+  <img src="https://github.com/CARE-SM/CARE-SM-docs/blob/main/docs/assets/ejprd.png?raw=true" alt="EJPRD logo" height="80">
+  <img src="https://github.com/CARE-SM/CARE-SM-docs/blob/main/docs/assets/eu.png?raw=true" alt="EU logo" height="80">
 
-[CARE Semantic Model](https://github.com/CARE-SM/CARE-Semantic-Model) defines a set of clinical data elements used in the healthcare domain of knowledge. However, it doesn't specify a mechanism for bringing these to life. 
+</p>
 
-The proposed implementation workflows described in this repository (both Fiab and Standalone) uses a common set of technologies for the whole transformation of patient data into a RDF-representation.
+After the end of EJP RD, this work was led and mantained by several researchers of the [Wilkinsonlab](http://wilkinsonlab.info/) at Universidad Politécnica de Madrid.
 
-1) **CSV**
+<p align="center">
+  <img src="https://github.com/CARE-SM/CARE-SM-docs/blob/main/docs/assets/UPM.png?raw=true" alt="EU logo" width="200">
+</p> 
 
-      This workflow consumes CSV tables as the primary data source. Each row within these tables represents an individual observation. The required information for generating each module is defined within a set of columns. For instance, the diagnosis module requires several distinct columns, including those for patient identifier, diagnosis date, and the IRI used for disease definition. A predefined set of common column names is used to reference each specific clinical entries. These set of columns acts as a [data element glossary](/CSV/README.md), templating which columns are required to be filled in every data element.
-
-2) **YARRRML**
-
-    These columns are referenced in an RDF-compliance template, which defines the structure of the resulting RDF shape. These templates are formulated in [YARRRML](https://rml.io/yarrrml/spec/), a versatile templating language capable of defining the RDF structure and uses the column names to reference the CSV data and create a complete RDF representation.
-
-
-This implementation requires two main transformation steps:
-
-1) **Data pre-validation and adaptation**
-
-    After creating this CSV template with the patient data on it, this CSV template needs to be adapted to YARRRML template before performing RDF transformation. This modification add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider. This translation is executed by a component called [CARE-SM Toolkit](#care-sm-toolkit).
-
-2) **Data transformation into RDF** 
-
-    Once both CSV template and YARRRML template are 
-
-## FAIR-in-a-box software
-
-Born as a [European Joint Project on Rare Diseases (EJP-RD)](https://www.ejprarediseases.org/) initiative, a set of technologies and softwares have been created, capable of consuming data tables into RDF data representation. [FAIR-in-a-box](https://github.com/ejp-rd-vp/FiaB) has implemented a whole pipeline for patient-based data using CARE-SM. Same technologies can be used outside FAIR-in-a-box software in a standalone implementation.
-
-FAIR-in-a-box solution is documented out of this repository, please [follow Fiab link](https://github.com/ejp-rd-vp/FiaB)
-
-## Standalone implementation
-
-From those who are not interested in using FAIR-in-a-box or interested in exploring every step in the workflow locally. You have the option to perform RDF transformations without relying on the FAIR-in-a-box solution. To support this process, we have developed Docker compose images that cover the entire transformation pipeline. The standalone implementation can be described as follows:
-
-
-<p align="center"> 
-  <img src="/CARE-SM_workflow.png"> 
-<p align="center" ><b>Figure 1: Standalone CARE-SM implementation </b></p>
-
-1) **CSV template creation:** First, a CSV data template is created using the CSV template defined by a [data element glossary](/CSV/README.md) Rename your CSV file with one of the tagnames defined at the glossary. Eg.: "Diagnosis", "First_visit" or "Laboratory".
-
-2) **Quality control by CARE-SM toolkit**: CARE-SM Toolkit will transform all your tagged CSV files e.g.: `Diagnosis.csv` to the curated CSV template called `CARE.csv` (green box from [Figure 1](#standalone-implementation)).  This step generates a much richer CSV file that is used by the YARRRML to do the final RDF transformation.
-
-3) **YARRRML template**: Alongside this standard CSV template, a YARRRML template defines the final RDF shape based on the CARE semantic model. This YARRRML template is provided [here](/YARRRML/README.md) at this repository, so there's no need for you to create it from scratch. For more information about how we built our YARRRML template, check [EMbuilder YARRRML template builder](https://github.com/pabloalarconm/EMbuilder).
-
-4) **Folder distribution:**
-```bash
-.
-./data/
-./data/CARE.csv  # CSV data file, explained above
-./data/YARRRML_yarrrml.yaml # YARRRML template, explained above
-./data/triples/  # Output RDF data ends up here, this folder will be automatically created.
-./docker-compose.yaml # Docker image that will execute the transformation (step below)
-```
-
-5) **RDF transformation execution:**
-
-You can use Docker compose to run the services (red box from [Figure 1](#standalone-implementation))
-
-```yaml
-version: "3"
-services:
-  yarrml-rdfizer:
-    image: markw/yarrrml-rml-ejp:0.1.2
-    container_name: yarrrml-rdfizer
-    environment:
-      # (nquads (default), trig, trix, jsonld, hdt, turtle)
-      - SERIALIZATION=nquads
-    ports:
-      - "4567:4567"
-    volumes:
-      - ./data:/mnt/data
-```
-
-Once this services are running, call in your local browser this link: http://127.0.0.1:4567/CARE
-The RDF file should be created at ./data/triples` folder.
-
-## Exemplar data
-
-
-**CSV:** You can also find an exemplar patient data table **before and after** using CARE-SM Toolkit implementation at [exemplar_data](/CSV/data/README.md) folder.
-
-**RDF:** You can also find resulting RDF patient data at [RDF](/RDF/README.md) folder.
-
-## CARE-SM Toolkit
-
-Before running any RDF transformation of our CSV data table. Some quality controls are required to make sure every data element is properly represented and described. Also, this step modifies the template CSV to add additional fields and automatically make certain translations that reduce the complexity and burden on the data provider.
-
-To perform this particular and critical step, CARE-SM Toolkit is created. The primary transformation carried out includes:
-
-* Adding every domain specific ontological term required to define every instance of the model, these terms are specific for every data element.
-
-* Splitting the column labeled as `value` into distinct data types. This enables YARRRML to interpret each data type differently, facilitating the subsequent processing.
-
-* Conducting a sanity check on the date-based column names (as `date`, `startdate` and `enddate`) to ensure data consistency and validity.
-
-* Eliminating any input rows that lack the minimal required data to minimize the generation of incomplete RDF transformations.
-
-* Creation of the column called `uniqid` that assigns a unique identifier to each observation. This prevents the RDF instances from overlapping with one another, ensuring their distinctiveness and integrity.
-
-In conclusion, the implementation of the CARE Semantic Model for CSV data entails a meticulous and technically advanced workflow. By leveraging the power of the YARRRML templates and incorporating the critical curation step executed by the Hefesto toolkit, this implementation achieves robustness, accuracy, and reliability in generating RDF-based patient data.
-
-For more information about CARE-SM Toolkit, please check the [Github repository](https://github.com/CARE-SM/CARE-SM-Toolkit).
 
