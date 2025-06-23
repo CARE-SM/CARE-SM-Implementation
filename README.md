@@ -2,10 +2,8 @@
 **Repository dedicated to explore workflows for CARE-SM implementation**
 
 <p align="center"> 
-  <img src="https://raw.githubusercontent.com/CARE-SM/CARE-Semantic-Model/main/images/CARE-SM_logo.png"width="200" height="200"> 
+    <img src="https://github.com/CARE-SM/CARE-SM-docs/blob/main/docs/assets/care-sm.png?raw=true"width="400" height="400"> 
 <p align="center" > </p> 
-
-<hr>
 
 ## Full Documentation
 
