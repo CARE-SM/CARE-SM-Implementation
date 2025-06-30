@@ -1,0 +1,2 @@
+model,pid,event_id,value,value_datatype,activity,startdate
+Disability,30056,12345,8,xsd:float,http://purl.obolibrary.org/obo/NCIT_C107391,2006-01-19
