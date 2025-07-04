@@ -1,7 +1,5 @@
-<http://example.com/20241114192638223614_Age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C25150> .
 <http://example.com/20241114192638223614_Age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_001013> .
 <http://example.com/20241114192638223614_Enddate> <http://semanticscience.org/resource/SIO_000300> "2006-01-19"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://example.com/20241114192638223614_Enddate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C68617> .
 <http://example.com/20241114192638223614_Enddate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000032> .
 <http://example.com/20241114192638223614_Enddate> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic enddate: 2006-01-19" .
 <http://example.com/20241114192638223614_Record> <http://semanticscience.org/resource/SIO_000068> <http://example.com/30056_12345_Event> .
@@ -11,15 +9,13 @@
 <http://example.com/20241114192638223614_Record> <http://semanticscience.org/resource/SIO_000680> <http://example.com/20241114192638223614_Startdate> .
 <http://example.com/20241114192638223614_Record> <http://semanticscience.org/resource/SIO_000681> <http://example.com/20241114192638223614_Enddate> .
 <http://example.com/20241114192638223614_Record> <http://semanticscience.org/resource/SIO_000687> <http://example.com/20241114192638223614_Age> .
-<http://example.com/20241114192638223614_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C62143> .
-<http://example.com/20241114192638223614_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000088> .
+<http://example.com/20241114192638223614_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_001027> .
 <http://example.com/20241114192638223614_Record> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic" .
 <http://example.com/20241114192638223614_Startdate> <http://semanticscience.org/resource/SIO_000300> "2006-01-19"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://example.com/20241114192638223614_Startdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C68616> .
 <http://example.com/20241114192638223614_Startdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000031> .
 <http://example.com/20241114192638223614_Startdate> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic startdate: 2006-01-19" .
 <http://example.com/30056_12345_Event> <http://semanticscience.org/resource/SIO_000300> "12345" .
-<http://example.com/30056_12345_Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C25499> .
+<http://example.com/30056_12345_Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000088> .
 <http://example.com/30056_20241114192638223614_Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/GENO_0000136> <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000614> <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Attribute> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic attribute" <http://example.com/20241114192638223614_Record> .
@@ -57,7 +53,6 @@
 <http://example.com/30056_20241114192638223614_Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000090> <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic specification" <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Role> <http://semanticscience.org/resource/SIO_000356> <http://example.com/30056_20241114192638223614_Process> <http://example.com/20241114192638223614_Record> .
-<http://example.com/30056_20241114192638223614_Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000093> <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000016> <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Role> <http://www.w3.org/2000/01/rdf-schema#label> "Patient role" <http://example.com/20241114192638223614_Record> .
 <http://example.com/30056_20241114192638223614_Specific_method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C18477> <http://example.com/20241114192638223614_Record> .

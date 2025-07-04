@@ -1,7 +1,5 @@
-<http://example.com/20241114192638223679_Age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C25150> .
 <http://example.com/20241114192638223679_Age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_001013> .
 <http://example.com/20241114192638223679_Enddate> <http://semanticscience.org/resource/SIO_000300> "2010-11-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://example.com/20241114192638223679_Enddate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C68617> .
 <http://example.com/20241114192638223679_Enddate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000032> .
 <http://example.com/20241114192638223679_Enddate> <http://www.w3.org/2000/01/rdf-schema#label> "Questionnaire enddate: 2010-11-12" .
 <http://example.com/20241114192638223679_Record> <http://semanticscience.org/resource/SIO_000068> <http://example.com/30056_45678_Event> .
@@ -11,11 +9,9 @@
 <http://example.com/20241114192638223679_Record> <http://semanticscience.org/resource/SIO_000680> <http://example.com/20241114192638223679_Startdate> .
 <http://example.com/20241114192638223679_Record> <http://semanticscience.org/resource/SIO_000681> <http://example.com/20241114192638223679_Enddate> .
 <http://example.com/20241114192638223679_Record> <http://semanticscience.org/resource/SIO_000687> <http://example.com/20241114192638223679_Age> .
-<http://example.com/20241114192638223679_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C62143> .
-<http://example.com/20241114192638223679_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000088> .
+<http://example.com/20241114192638223679_Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_001027> .
 <http://example.com/20241114192638223679_Record> <http://www.w3.org/2000/01/rdf-schema#label> "Questionnaire" .
 <http://example.com/20241114192638223679_Startdate> <http://semanticscience.org/resource/SIO_000300> "2010-11-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://example.com/20241114192638223679_Startdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C68616> .
 <http://example.com/20241114192638223679_Startdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000031> .
 <http://example.com/20241114192638223679_Startdate> <http://www.w3.org/2000/01/rdf-schema#label> "Questionnaire startdate: 2010-11-12" .
 <http://example.com/30056_20241114192638223679_Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000614> <http://example.com/20241114192638223679_Record> .
@@ -57,7 +53,6 @@
 <http://example.com/30056_20241114192638223679_Protocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000090> <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Protocol> <http://www.w3.org/2000/01/rdf-schema#label> "Questionnaire specification" <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Role> <http://semanticscience.org/resource/SIO_000356> <http://example.com/30056_20241114192638223679_Process> <http://example.com/20241114192638223679_Record> .
-<http://example.com/30056_20241114192638223679_Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000093> <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000016> <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Role> <http://www.w3.org/2000/01/rdf-schema#label> "Patient role" <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Specific_method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://prom.example/PROM_555685> <http://example.com/20241114192638223679_Record> .
@@ -67,7 +62,7 @@
 <http://example.com/30056_20241114192638223679_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000074> <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_20241114192638223679_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Questionnaire unit of measurement" <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_45678_Event> <http://semanticscience.org/resource/SIO_000300> "45678" .
-<http://example.com/30056_45678_Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/NCIT_C25499> .
+<http://example.com/30056_45678_Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000088> .
 <http://example.com/30056_Identifier> <http://semanticscience.org/resource/SIO_000020> <http://example.com/30056_20241114192638223679_Role> <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_Identifier> <http://semanticscience.org/resource/SIO_000300> "30056" <http://example.com/20241114192638223679_Record> .
 <http://example.com/30056_Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000115> <http://example.com/20241114192638223679_Record> .
