@@ -61,7 +61,7 @@ WHERE {
   }
 
   				### Medical history ###
-  ?record a obo:NCIT_C62143 ;
+  ?record a sio:SIO_001027 ;
     	  rdfs:label ?record_label ;
           sio:SIO_000680 ?startdate ;
           sio:SIO_000681 ?enddate ;
@@ -78,11 +78,11 @@ WHERE {
   OPTIONAL { ?startdate sio:SIO_000300 ?value_startdate }
   OPTIONAL { ?enddate sio:SIO_000300 ?value_enddate }
 
-  ?age a sio:SIO_001013, obo:NCIT_C25150 .
-  ?startdate a sio:SIO_000031, obo:NCIT_C68616 .
-  ?enddate a sio:SIO_000032, obo:NCIT_C68617 .
+  ?age a sio:SIO_001013 .
+  ?startdate a sio:SIO_000031.
+  ?enddate a sio:SIO_000032.
 
   					### Event ###
-  OPTIONAL {?event a obo:NCIT_C25499 ; sio:SIO_000300 ?event_id .}
+  OPTIONAL {?event a sio:SIO_000088 ; sio:SIO_000300 ?event_id .}
 }
 ORDER BY ?pid

@@ -52,7 +52,7 @@ mapping:
       predicate: rdf:type
     - objects:
         type: iri
-        value: obo:OBI_0000093
+        value: $(role_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -464,11 +464,7 @@ mapping:
       predicate: sio:SIO_000253
     - objects:
         type: iri
-        value: obo:NCIT_C62143
-      predicate: rdf:type
-    - objects:
-        type: iri
-        value: sio:SIO_000088
+        value: sio:SIO_001027
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -496,10 +492,6 @@ mapping:
         value: sio:SIO_001013
       predicate: rdf:type
     - objects:
-        type: iri
-        value: obo:NCIT_C25150
-      predicate: rdf:type
-    - objects:
         datatype: xsd:string
         value: '$(model) age when it ocurred: $(age)'
       predicate: rdfs:label
@@ -517,10 +509,6 @@ mapping:
         value: sio:SIO_000031
       predicate: rdf:type
     - objects:
-        type: iri
-        value: obo:NCIT_C68616
-      predicate: rdf:type
-    - objects:
         datatype: xsd:string
         value: '$(model) startdate: $(startdate)'
       predicate: rdfs:label
@@ -536,10 +524,6 @@ mapping:
     - objects:
         type: iri
         value: sio:SIO_000032
-      predicate: rdf:type
-    - objects:
-        type: iri
-        value: obo:NCIT_C68617
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -623,7 +607,7 @@ mapping:
     predicateobject:
     - objects:
         type: iri
-        value: obo:NCIT_C25499
+        value: sio:SIO_000088
       predicate: rdf:type
     - objects:
         datatype: xsd:string
@@ -633,7 +617,6 @@ mapping:
     - source_cde_test
     subjects: this:$(pid)_$(event_id)_Event
 prefixes:
-  obo: http://purl.obolibrary.org/obo/
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   sio: http://semanticscience.org/resource/
@@ -646,3 +629,4 @@ sources:
     access: /mnt/data/CARE.csv
     iterator: $
     referenceFormulation: csv
+

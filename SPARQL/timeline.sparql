@@ -8,7 +8,7 @@ WHERE {
   {
     SELECT ?patient_id (CONCAT("Record: ", STR(?record_label), ", ", STR(?value_startdate)) AS ?record_with_date)
     WHERE {
-      ?record a obo:NCIT_C62143 ;
+      ?record a sio:SIO_001027 ;
               rdfs:label ?record_label ;
               sio:SIO_000300 ?record_id ;
               sio:SIO_000680 ?startdate ;
