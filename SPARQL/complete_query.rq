@@ -1,0 +1,50 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ordo: <http://www.orpha.net/ORDO/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT distinct ?individual_id ?value_startdate ?process_label ?value ?attribute_type ?target_type ?event_id #?activity_type ?substance ?concentration_value ?frequency_value
+
+WHERE {
+    GRAPH ?g {
+        ?role sio:SIO_000356 ?process ;  a sio:SIO_000016 .
+        ?process a sio:SIO_000006, ?process_type; rdfs:label ?process_label; sio:SIO_000229 ?output; sio:SIO_000291 ?target; sio:SIO_000230 ?input; sio:SIO_000139 ?agent; sio:SIO_000339 ?protocol . FILTER(?process_type != sio:SIO_000006) .
+        ?output sio:SIO_000628 ?attribute; a sio:SIO_000015; rdfs:label ?output_label.
+        ?attribute a sio:SIO_000614.   
+        
+        OPTIONAL{?output a ?outpute_type. FILTER(?attribute_type != sio:SIO_000015)}
+        OPTIONAL{?attribute a ?attribute_type. FILTER(?attribute_type != sio:SIO_000614)}
+        OPTIONAL{?input a ?input_type. FILTER(?input_type != sio:SIO_000015)} 
+        OPTIONAL{?target a ?target_type. FILTER(?target_type != sio:SIO_000015)} 
+        OPTIONAL{?agent a ?agent_type. FILTER(?agent != sio:SIO_000015)}
+
+        OPTIONAL{?frequency a ?frequency_type, sio:SIO_001367 .FILTER (?frequency_type != sio:SIO_001367)}
+        OPTIONAL{?substance a ?substance_type, sio:SIO_000315 .FILTER (?substance_type != sio:SIO_000315)}
+        OPTIONAL{?concentration a ?concentration_type, sio:SIO_001088 .FILTER (?concentration_type != sio:SIO_001088)}
+        OPTIONAL{?activity a ?activity_type, sio:SIO_000091 .FILTER (?activity_type != sio:SIO_000091)}
+            
+        OPTIONAL{?process rdfs:comments ?comments}. 
+        OPTIONAL{?output sio:SIO_000300 ?value}.   
+        OPTIONAL{?substance sio:SIO_000300 ?substance_value}.   
+        OPTIONAL{?frequency sio:SIO_000300 ?frequency_value}.   
+    }
+    ?g a obo:NCIT_C62143 ; sio:SIO_000068 ?timeline, ?event ;
+                           sio:SIO_000680 ?startdate;
+                           sio:SIO_000681 ?enddate;
+                           sio:SIO_000687 ?age;
+                           sio:SIO_000300 ?uniqid .
+        
+    ?age a sio:SIO_001013, obo:NCIT_C25150 .
+    ?startdate a sio:SIO_000031, obo:NCIT_C68616 .
+    ?enddate a sio:SIO_000032, obo:NCIT_C68617 .
+    ?event a obo:NCIT_C25499 ; sio:SIO_000300 ?event_id.
+        
+    OPTIONAL{?age sio:SIO_000300 ?age_value .}
+    OPTIONAL{?startdate sio:SIO_000300 ?value_startdate .}
+    OPTIONAL{?enddate sio:SIO_000300 ?value_enddate .}
+        
+    ?timeline a obo:NCIT_C54576, sio:SIO_000417; sio:SIO_000332 ?individual .
+    ?individual a sio:SIO_000498, obo:NCIT_C25190 ; sio:SIO_000671 ?individual_identifier .       
+    ?individual_identifier a sio:SIO_000115, obo:NCIT_C164337 ; sio:SIO_000300 ?individual_id .
+}
