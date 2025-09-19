@@ -12,7 +12,6 @@ The content of the folder includes:
     * [Country](Country.csv)
     * [Examination](Examination.csv)
     * [Deathdate](Deathdate.csv)
-    * [Cause of death](Cause_death.csv)
     * [Diagnosis](Diagnosis.csv)
     * [Disability](Disability.csv)
     * [First confirmed visit](First_visit.csv)
