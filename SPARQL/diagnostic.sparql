@@ -16,15 +16,13 @@ WHERE {
              sio:SIO_000229 ?output ;
              sio:SIO_000291 ?target ;
              sio:SIO_000230 ?input ;
-             sio:SIO_000339 ?protocol ;
              sio:SIO_000028 ?specific_method .
     
     FILTER(?process_type = obo:NCIT_C18020) .
     OPTIONAL { ?process rdfs:comments ?comments }
                
     ?output a sio:SIO_000015 ;
-        sio:SIO_000628 ?attribute;
-        sio:SIO_000671 ?output_identifier.
+        sio:SIO_000628 ?attribute.
         
     OPTIONAL { ?output a ?outpute_type . FILTER(?outpute_type != sio:SIO_000015) }
     OPTIONAL { ?output sio:SIO_000300 ?value }
