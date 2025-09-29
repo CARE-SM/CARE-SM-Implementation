@@ -69,21 +69,25 @@ mapping:
         value: this:$(pid)_$(uniqid)_Target
       predicate: sio:SIO_000291
     - objects:
-        type: iri
-        value: this:$(pid)_$(uniqid)_Input
-      predicate: sio:SIO_000230
-    - objects:
         function: grel:controls_if
         parameters:
           - parameter: grel:bool_b
             value:
               function: idlab:isNull
               parameters:
-                - [idlab:str, $(output_id)]
+                - [idlab:str, $(protocol_id)]
           - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Output
+            value: this:$(pid)_$(uniqid)_Protocol
           - parameter: grel:any_false
-            value: $(output_id)
+            value: $(protocol_id)
+        type: iri
+      predicate: sio:SIO_000339
+    - objects:
+        type: iri
+        value: this:$(pid)_$(uniqid)_Input
+      predicate: sio:SIO_000230
+    - objects:
+        value: this:$(pid)_$(uniqid)_Output
         type: iri
       predicate: sio:SIO_000229
     - objects:
@@ -121,17 +125,7 @@ mapping:
         value: this:$(pid)_$(uniqid)_Unit
       predicate: sio:SIO_000221
     - objects:
-        function: grel:controls_if
-        parameters:
-          - parameter: grel:bool_b
-            value:
-              function: idlab:isNull
-              parameters:
-                - [idlab:str, $(protocol_id)]
-          - parameter: grel:any_true
-            value: this:$(pid)_$(uniqid)_Specification
-          - parameter: grel:any_false
-            value: $(protocol_id)
+        value: this:$(pid)_$(uniqid)_Specification
         type: iri
       predicate: sio:SIO_000339
     - objects:
@@ -144,7 +138,7 @@ mapping:
       predicate: rdf:type
     - objects:
         datatype: xsd:string
-        value: $(model) measurement output
+        value: $(model) output
       predicate: rdfs:label
     - objects:
         datatype: xsd:string
@@ -162,20 +156,13 @@ mapping:
         datatype: xsd:integer
         value: $(value_integer)
       predicate: sio:SIO_000300
-    sources:
+    - objects:
+        type: iri
+        value: $(value_id)
+      predicate: sio:SIO_000671
+    sources: 
     - source_cde_test
-    subjects:
-      function: grel:controls_if
-      parameters:
-        - parameter: grel:bool_b
-          value:
-            function: idlab:isNull
-            parameters:
-              - [idlab:str, $(output_id)]
-        - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Output
-        - parameter: grel:any_false
-          value: $(output_id)
+    subjects: this:$(pid)_$(uniqid)_Output
   20241113112523256460_source_cde_test:
     graph: this:$(uniqid)_Record
     predicateobject:
@@ -211,11 +198,29 @@ mapping:
       predicate: rdf:type
     - objects:
         type: iri
-        value: $(protocol_type)
+        value: $(specification_type)
       predicate: rdf:type
     - objects:
         datatype: xsd:string
         value: $(model) specification
+      predicate: rdfs:label
+    sources:
+    - source_cde_test
+    subjects: this:$(pid)_$(uniqid)_Specification
+  20241113112523256461_source_cde_test:
+    graph: this:$(uniqid)_Record
+    predicateobject:
+    - objects:
+        type: iri
+        value: sio:SIO_000090
+      predicate: rdf:type
+    - objects:
+        type: iri
+        value: $(protocol_type)
+      predicate: rdf:type
+    - objects:
+        datatype: xsd:string
+        value: $(model) protocol
       predicate: rdfs:label
     sources:
     - source_cde_test
@@ -228,7 +233,7 @@ mapping:
             parameters:
               - [idlab:str, $(protocol_id)]
         - parameter: grel:any_true
-          value: this:$(pid)_$(uniqid)_Specification
+          value: this:$(pid)_$(uniqid)_Protocol
         - parameter: grel:any_false
           value: $(protocol_id)
   20241113112523256464_source_cde_test:
@@ -591,6 +596,8 @@ prefixes:
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   sio: http://semanticscience.org/resource/
+  obo: http://purl.obolibrary.org/obo/
+  SCTID: http://snomed.info/id/
   this: '|||baseURI|||'
   xsd: http://www.w3.org/2001/XMLSchema#
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
