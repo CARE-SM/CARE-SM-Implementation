@@ -18,6 +18,7 @@ WHERE {
                sio:SIO_000229 ?output ;
                sio:SIO_000291 ?target ;
                sio:SIO_000230 ?input ;
+               sio:SIO_000339 ?protocol ;
                sio:SIO_000028 ?specific_method .
 
       ?output a sio:SIO_000015 ;
@@ -28,6 +29,7 @@ WHERE {
       ?input a sio:SIO_000015 .
       ?target a sio:SIO_000015 .
       ?specific_method a sio:SIO_000006 .
+      ?protocol a sio:SIO_000090 .
 
       ?specification a sio:SIO_000090 ;
                 sio:SIO_000028 ?frequency, ?notation, ?cause, ?functional_specification .

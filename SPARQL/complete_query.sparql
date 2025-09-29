@@ -20,6 +20,7 @@ WHERE {
              sio:SIO_000229 ?output ;
              sio:SIO_000291 ?target ;
              sio:SIO_000230 ?input ;
+        	   sio:SIO_000339 ?protocol ;
              sio:SIO_000028 ?specific_method .
     
     FILTER(?process_type != sio:SIO_000006)
@@ -42,6 +43,9 @@ WHERE {
     OPTIONAL { ?specific_method a ?specific_method_type . FILTER(?specific_method_type != sio:SIO_000006)}
     
     			### Protocol /Specification ###
+    ?protocol a sio:SIO_000090 ;
+    OPTIONAL { ?protocol a ?protocol_type . FILTER(?protocol_type != sio:SIO_000090) }
+
     ?specification a sio:SIO_000090 ;
               sio:SIO_000028 ?frequency, ?notation, ?cause, ?functional_specification .
 
