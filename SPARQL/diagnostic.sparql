@@ -4,37 +4,47 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX ordo: <http://www.orpha.net/ORDO/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?patient_id ?record_label ?value_startdate ?attribute_type
+SELECT DISTINCT ?patient_id ?value_startdate ?record_label ?output_identifier
 
 WHERE {
   GRAPH ?record {
+
+    ##################### Core model #######################
+
     ?person sio:SIO_000228 ?role .
     ?id sio:SIO_000020 ?role ; sio:SIO_000300 ?patient_id .
     ?role a sio:SIO_000016 ; sio:SIO_000356 ?process .
-    
-    ?process a ?process_type ;
-             sio:SIO_000229 ?output ;
-             sio:SIO_000291 ?target ;
-             sio:SIO_000230 ?input ;
-             sio:SIO_000028 ?specific_method .
-    
+    ?process a sio:SIO_000006, ?process_type ;
+               sio:SIO_000229 ?output . 
     FILTER(?process_type = obo:NCIT_C18020) .
+    
     OPTIONAL { ?process rdfs:comments ?comments }
-               
+
+    ##################### Output participants #######################
+
     ?output a sio:SIO_000015 ;
-        sio:SIO_000628 ?attribute.
-        
+            sio:SIO_000628 ?attribute ;
+            sio:SIO_000671 ?output_identifier.
+
+    ?output a sio:SIO_000015 .
     OPTIONAL { ?output a ?outpute_type . FILTER(?outpute_type != sio:SIO_000015) }
     OPTIONAL { ?output sio:SIO_000300 ?value }
-   
+    
     ?attribute a sio:SIO_000614 .
     OPTIONAL { ?attribute a ?attribute_type . FILTER(?attribute_type != sio:SIO_000614) }
+
+    ?output_identifier a sio:SIO_000115 .
+    OPTIONAL { ?output_identifier a ?output_identifier_type . FILTER(?output_identifier_type != sio:SIO_000115) }
+    OPTIONAL { ?output_identifier sio:SIO_000300 ?output_identifier_value }
+
   }
+    ##################### Mecical history #######################
+
   ?record a sio:SIO_001027 ;
     	  rdfs:label ?record_label ;
-          sio:SIO_000680 ?startdate.
+        sio:SIO_000680 ?startdate.
   
   OPTIONAL { ?startdate sio:SIO_000300 ?value_startdate }
   ?startdate a sio:SIO_000031 .
 }
-ORDER BY ?patient_id
+ORDER BY ?pid
