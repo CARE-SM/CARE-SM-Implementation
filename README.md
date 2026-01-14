@@ -1,5 +1,6 @@
 # CARE Semantic Model Implementation
-**Repository dedicated to explore workflows for CARE-SM implementation**
+**Repository dedicated to explore workflows for CARE-SM:** ![GitHub tag](https://img.shields.io/github/v/tag/CARE-SM/CARE-Semantic-Model)
+
 
 <p align="center"> 
     <img src="https://github.com/CARE-SM/CARE-SM-docs/blob/main/docs/assets/care-sm.png?raw=true"width="300" height="300"> 
@@ -10,7 +11,7 @@
 You can explore the complete documentation [here](https://care-sm.readthedocs.io/en/latest/), including detailed descriptions of all data elements, implementation guidelines, exemplar data, and additional resources.
 
 ## Communication and feedback
-Your feedback is more than welcome. It will help us improve our semantic data model. Please use [github issues](https://github.com/CARE-SM/CARE-SM-Implementation/issues) to provide your feedback.
+Your feedback is more than welcome. It will help us improve our semantic data model. Please use [Github issues](https://github.com/CARE-SM/CARE-SM-Implementation/issues) to provide your feedback.
 
 ## Acknowledgement
 
