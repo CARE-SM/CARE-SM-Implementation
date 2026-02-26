@@ -385,9 +385,55 @@ mapping:
         datatype: xsd:string
         value: $(model) attribute
       predicate: rdfs:label
+    - objects:
+        datatype: xsd:duration
+        value: $(duration)
+      predicate: sio:SIO_000300
+    - objects:
+        type: iri
+        value: this:$(uniqid)_Duration_Startdate
+      predicate: sio:SIO_000680
+    - objects:
+        type: iri
+        value: this:$(uniqid)_Duration_Enddate
+      predicate: sio:SIO_000681
     sources:
     - source_cde_test
     subjects: this:$(pid)_$(uniqid)_Attribute
+  2024111311252325651034_source_cde_test:
+    predicateobject:
+    - objects:
+        type: iri
+        value: sio:SIO_000031
+      predicate: rdf:type
+    - objects:
+        datatype: xsd:string
+        value: '$(model) startdate: $(duration_startdate)'
+      predicate: rdfs:label
+    - objects:
+        datatype: xsd:date
+        value: $(duration_startdate)
+      predicate: sio:SIO_000300
+    sources:
+    - source_cde_test
+    subjects: this:$(uniqid)_Duration_Startdate
+  2024111311252325651445_source_cde_test:
+    predicateobject:
+    - objects:
+        type: iri
+        value: sio:SIO_000032
+      predicate: rdf:type
+    - objects:
+        datatype: xsd:string
+        value: '$(model) enddate: $(duration_enddate)'
+      predicate: rdfs:label
+    - objects:
+        datatype: xsd:date
+        value: $(duration_enddate)
+      predicate: sio:SIO_000300
+    sources:
+    - source_cde_test
+    subjects: this:$(uniqid)_Duration_Enddate
   20241113112523256485_source_cde_test:
     graph: this:$(uniqid)_Record
     predicateobject:

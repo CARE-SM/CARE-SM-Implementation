@@ -55,7 +55,7 @@ WHERE {
     OPTIONAL { ?output a ?output_type . FILTER(?output_type != sio:SIO_000015) }
     OPTIONAL { ?output sio:SIO_000300 ?value }
     
-    ?attribute a sio:SIO_000614 .
+    ?attribute a sio:SIO_000614 ; sio:SIO_000680 ?duration_startdate ; sio:SIO_000681 ?duration_enddate .
     OPTIONAL { ?attribute a ?attribute_type . FILTER(?attribute_type != sio:SIO_000614) }
 
     ?output_identifier a sio:SIO_000115 .
@@ -68,6 +68,13 @@ WHERE {
     ?unit a sio:SIO_000074 .
     OPTIONAL { ?unit a ?unit_type . FILTER(?unit_type != sio:SIO_000074) }
     OPTIONAL { ?unit sio:SIO_000300 ?unit_value }
+
+    ?duration_startdate a sio:SIO_000031 .
+    ?duration_enddate a sio:SIO_000032 .
+    OPTIONAL { ?duration_startdate sio:SIO_000300 ?duration_value_startdate }
+    OPTIONAL { ?duration_enddate sio:SIO_000300 ?duration_value_enddate }
+    OPTIONAL { ?attribute sio:SIO_000300 ?duration_value }
+
   }
     ##################### Medical history #######################
 

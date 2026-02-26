@@ -34,10 +34,13 @@ WHERE {
       ?protocol a sio:SIO_000090 .
       ?specific_method a sio:SIO_000006 .
       
-      ?attribute a sio:SIO_000614 .
+      ?attribute a sio:SIO_000614 ; sio:SIO_000680 ?duration_startdate ; sio:SIO_000681 ?duration_enddate .
       ?output_identifier a sio:SIO_000115.
       ?casue a sio:SIO_000015 .
       ?unit a sio:SIO_000074 .
+
+      ?duration_startdate a sio:SIO_000031 .
+      ?duration_enddate a sio:SIO_000032 .
     }
 
   ?record a sio:SIO_001027 ;
